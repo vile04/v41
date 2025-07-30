@@ -1,0 +1,397 @@
+2025-07-29 19:05:59,843 - services.ai_manager - INFO - ✅ Gemini Flash inicializado com sucesso
+2025-07-29 19:05:59,856 - services.ai_manager - INFO - ✅ OpenAI inicializado com sucesso
+2025-07-29 19:05:59,857 - services.ai_manager - INFO - ✅ HuggingFace inicializado com sucesso
+2025-07-29 19:05:59,857 - services.ai_manager - INFO - AI Manager inicializado com 3 provedores disponíveis
+2025-07-29 19:05:59,992 - services.production_search_manager - INFO - 🚀 Production Search Manager inicializado
+2025-07-29 19:05:59,992 - services.production_search_manager - INFO - 📊 Provedores habilitados: google, serper, bing, duckduckgo
+2025-07-29 19:05:59,996 - services.content_extractor - INFO - Content Extractor inicializado com múltiplas estratégias
+2025-07-29 19:06:00,007 - services.search_manager - INFO - ✅ Google Custom Search disponível
+2025-07-29 19:06:00,007 - services.search_manager - INFO - ✅ Serper API disponível
+2025-07-29 19:06:00,007 - services.search_manager - INFO - ✅ Bing e DuckDuckGo sempre disponíveis (scraping)
+2025-07-29 19:06:00,008 - services.search_manager - INFO - Search Manager inicializado com 4 provedores disponíveis
+2025-07-29 19:06:00,016 - services.mental_drivers_architect - INFO - Mental Drivers Architect inicializado com 19 drivers universais
+2025-07-29 19:06:00,022 - services.future_prediction_engine - INFO - Future Prediction Engine inicializado
+2025-07-29 19:06:00,022 - services.ultra_detailed_analysis_engine - INFO - Ultra Detailed Analysis Engine inicializado - Modo GIGANTE ativado
+2025-07-29 19:06:00,023 - services.enhanced_analysis_engine - INFO - Enhanced Analysis Engine inicializado - Sistemas: {'ai_manager': True, 'search_manager': True, 'content_extractor': True}
+2025-07-29 19:06:00,623 - services.production_content_extractor - INFO - 🚀 Production Content Extractor inicializado
+2025-07-29 19:06:00,632 - __main__ - INFO - 🚀 Iniciando ARQV30 Enhanced v2.0 em MODO PRODUÇÃO
+2025-07-29 19:06:00,633 - __main__ - INFO - 🔒 Debug desabilitado, headers de segurança habilitados
+2025-07-29 19:06:00,633 - __main__ - INFO - Servidor: http://0.0.0.0:5000
+2025-07-29 19:06:00,633 - __main__ - INFO - Encoding: UTF-8
+2025-07-29 19:06:00,633 - __main__ - INFO - Locale: ('pt_BR', 'UTF-8')
+2025-07-29 19:06:00,634 - __main__ - ERROR - Erro ao iniciar aplicação: '>' not supported between instances of 'NoneType' and 'float'
+2025-07-29 19:06:00,635 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\user\Desktop\project-bolt-github-sdjezidm\project\src\run.py", line 310, in main
+    search_status = production_search_manager.get_provider_status()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\project-bolt-github-sdjezidm\project\src\services\production_search_manager.py", line 835, in get_provider_status
+    'rate_limited': config.get('quota_reset', 0) > time.time(),
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+
+2025-07-29 19:06:00,635 - __main__ - INFO - 🧹 Executando limpeza final...
+2025-07-29 19:06:00,648 - services.production_content_extractor - INFO - 🗑️ Cache de conteúdo limpo
+2025-07-29 20:15:55,722 - services.ai_manager - INFO - ✅ Gemini Flash inicializado com sucesso
+2025-07-29 20:15:55,736 - services.ai_manager - INFO - ✅ OpenAI inicializado com sucesso
+2025-07-29 20:15:55,736 - services.ai_manager - INFO - ✅ HuggingFace inicializado com sucesso
+2025-07-29 20:15:55,736 - services.ai_manager - INFO - AI Manager inicializado com 3 provedores disponíveis
+2025-07-29 20:15:55,823 - services.production_search_manager - INFO - 🚀 Production Search Manager inicializado
+2025-07-29 20:15:55,824 - services.production_search_manager - INFO - 📊 Provedores habilitados: google, serper, bing, duckduckgo
+2025-07-29 20:15:55,825 - services.content_extractor - INFO - Content Extractor inicializado com múltiplas estratégias
+2025-07-29 20:15:55,827 - services.search_manager - INFO - ✅ Google Custom Search disponível
+2025-07-29 20:15:55,827 - services.search_manager - INFO - ✅ Serper API disponível
+2025-07-29 20:15:55,827 - services.search_manager - INFO - ✅ Bing e DuckDuckGo sempre disponíveis (scraping)
+2025-07-29 20:15:55,827 - services.search_manager - INFO - Search Manager inicializado com 4 provedores disponíveis
+2025-07-29 20:15:55,828 - services.mental_drivers_architect - INFO - Mental Drivers Architect inicializado com 19 drivers universais
+2025-07-29 20:15:55,829 - services.future_prediction_engine - INFO - Future Prediction Engine inicializado
+2025-07-29 20:15:55,829 - services.ultra_detailed_analysis_engine - INFO - Ultra Detailed Analysis Engine inicializado - Modo GIGANTE ativado
+2025-07-29 20:15:55,829 - services.enhanced_analysis_engine - INFO - Enhanced Analysis Engine inicializado - Sistemas: {'ai_manager': True, 'search_manager': True, 'content_extractor': True}
+2025-07-29 20:15:56,371 - services.production_content_extractor - INFO - 🚀 Production Content Extractor inicializado
+2025-07-29 20:15:56,380 - __main__ - INFO - 🚀 Iniciando ARQV30 Enhanced v2.0 em MODO PRODUÇÃO
+2025-07-29 20:15:56,380 - __main__ - INFO - 🔒 Debug desabilitado, headers de segurança habilitados
+2025-07-29 20:15:56,380 - __main__ - INFO - Servidor: http://0.0.0.0:5000
+2025-07-29 20:15:56,381 - __main__ - INFO - Encoding: UTF-8
+2025-07-29 20:15:56,381 - __main__ - INFO - Locale: ('pt_BR', 'UTF-8')
+2025-07-29 20:15:56,381 - __main__ - ERROR - Erro ao iniciar aplicação: '>' not supported between instances of 'NoneType' and 'float'
+2025-07-29 20:15:56,382 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\user\Desktop\project-bolt-github-sdjezidm\project\src\run.py", line 310, in main
+    search_status = production_search_manager.get_provider_status()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\project-bolt-github-sdjezidm\project\src\services\production_search_manager.py", line 835, in get_provider_status
+    'rate_limited': config.get('quota_reset', 0) > time.time(),
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+
+2025-07-29 20:15:56,383 - __main__ - INFO - 🧹 Executando limpeza final...
+2025-07-29 20:15:56,395 - services.production_content_extractor - INFO - 🗑️ Cache de conteúdo limpo
+2025-07-30 18:18:41,746 - services.ai_manager - INFO - AI Manager inicializado com 0 provedores disponíveis
+2025-07-30 18:18:41,956 - services.production_search_manager - INFO - 🚀 Production Search Manager inicializado
+2025-07-30 18:18:41,956 - services.production_search_manager - INFO - 📊 Provedores habilitados: bing, duckduckgo
+2025-07-30 18:18:41,956 - services.production_search_manager - WARNING - ⚠️ Provedor google desabilitado
+2025-07-30 18:18:41,957 - services.production_search_manager - WARNING - ⚠️ Provedor serper desabilitado
+2025-07-30 18:18:41,962 - services.content_extractor - INFO - Content Extractor inicializado com múltiplas estratégias
+2025-07-30 15:24:45,217 - services.ai_manager - INFO - ✅ Gemini Flash inicializado com sucesso
+2025-07-30 15:24:45,231 - services.ai_manager - INFO - ✅ OpenAI inicializado com sucesso
+2025-07-30 15:24:45,231 - services.ai_manager - INFO - ✅ HuggingFace inicializado com sucesso
+2025-07-30 15:24:45,231 - services.ai_manager - INFO - AI Manager inicializado com 3 provedores disponíveis
+2025-07-30 15:24:45,324 - services.production_search_manager - INFO - 🚀 Production Search Manager inicializado
+2025-07-30 15:24:45,325 - services.production_search_manager - INFO - 📊 Provedores habilitados: google, serper, bing, duckduckgo
+2025-07-30 15:24:45,329 - services.content_extractor - INFO - Content Extractor inicializado com múltiplas estratégias
+2025-07-30 15:24:45,339 - services.production_content_extractor - INFO - 🚀 Production Content Extractor inicializado
+2025-07-30 15:24:45,339 - services.ultra_detailed_analysis_engine - INFO - Ultra Detailed Analysis Engine inicializado - Modo GIGANTE ativado
+2025-07-30 15:24:45,342 - services.mental_drivers_architect - INFO - Mental Drivers Architect inicializado com 19 drivers universais
+2025-07-30 15:24:45,347 - services.future_prediction_engine - INFO - Future Prediction Engine inicializado
+2025-07-30 15:24:45,348 - services.enhanced_analysis_engine - INFO - Enhanced Analysis Engine inicializado - Sistemas: {'ai_manager': True, 'search_manager': True, 'content_extractor': True}
+2025-07-30 15:24:45,954 - __main__ - INFO - 🔧 Iniciando ARQV30 Enhanced v2.0 em MODO DESENVOLVIMENTO
+2025-07-30 15:24:45,955 - __main__ - INFO - Servidor: http://0.0.0.0:5000
+2025-07-30 15:24:45,958 - __main__ - INFO - Encoding: UTF-8
+2025-07-30 15:24:45,958 - __main__ - INFO - Locale: ('pt_BR', 'UTF-8')
+2025-07-30 15:24:45,962 - __main__ - INFO - 🔍 Provedores de busca ativos: google, serper, bing, duckduckgo
+2025-07-30 15:24:45,963 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 1
+2025-07-30 15:24:45,978 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.5:5000
+2025-07-30 15:24:45,978 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 15:24:45,980 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 15:24:46,799 - services.ai_manager - INFO - ✅ Gemini Flash inicializado com sucesso
+2025-07-30 15:24:46,814 - services.ai_manager - INFO - ✅ OpenAI inicializado com sucesso
+2025-07-30 15:24:46,814 - services.ai_manager - INFO - ✅ HuggingFace inicializado com sucesso
+2025-07-30 15:24:46,814 - services.ai_manager - INFO - AI Manager inicializado com 3 provedores disponíveis
+2025-07-30 15:24:46,901 - services.production_search_manager - INFO - 🚀 Production Search Manager inicializado
+2025-07-30 15:24:46,902 - services.production_search_manager - INFO - 📊 Provedores habilitados: google, serper, bing, duckduckgo
+2025-07-30 15:24:46,903 - services.content_extractor - INFO - Content Extractor inicializado com múltiplas estratégias
+2025-07-30 15:24:46,906 - services.production_content_extractor - INFO - 🚀 Production Content Extractor inicializado
+2025-07-30 15:24:46,906 - services.ultra_detailed_analysis_engine - INFO - Ultra Detailed Analysis Engine inicializado - Modo GIGANTE ativado
+2025-07-30 15:24:46,909 - services.mental_drivers_architect - INFO - Mental Drivers Architect inicializado com 19 drivers universais
+2025-07-30 15:24:46,910 - services.future_prediction_engine - INFO - Future Prediction Engine inicializado
+2025-07-30 15:24:46,910 - services.enhanced_analysis_engine - INFO - Enhanced Analysis Engine inicializado - Sistemas: {'ai_manager': True, 'search_manager': True, 'content_extractor': True}
+2025-07-30 15:24:47,481 - __main__ - INFO - 🔧 Iniciando ARQV30 Enhanced v2.0 em MODO DESENVOLVIMENTO
+2025-07-30 15:24:47,482 - __main__ - INFO - Servidor: http://0.0.0.0:5000
+2025-07-30 15:24:47,483 - __main__ - INFO - Encoding: UTF-8
+2025-07-30 15:24:47,485 - __main__ - INFO - Locale: ('pt_BR', 'UTF-8')
+2025-07-30 15:24:47,485 - __main__ - INFO - 🔍 Provedores de busca ativos: google, serper, bing, duckduckgo
+2025-07-30 15:24:47,486 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 1
+2025-07-30 15:24:47,492 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 15:24:47,496 - werkzeug - INFO -  * Debugger PIN: 834-144-096
+2025-07-30 15:25:40,532 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:25:40] "GET / HTTP/1.1" 200 -
+2025-07-30 15:25:40,619 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:25:40] "GET /static/css/main.css HTTP/1.1" 200 -
+2025-07-30 15:25:40,778 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:25:40] "GET /static/css/components.css HTTP/1.1" 200 -
+2025-07-30 15:25:40,871 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:25:40] "GET /static/images/logo.png HTTP/1.1" 200 -
+2025-07-30 15:25:40,872 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:25:40] "GET /static/js/upload.js HTTP/1.1" 200 -
+2025-07-30 15:25:40,872 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:25:40] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-30 15:25:40,874 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:25:40] "GET /static/js/analysis.js HTTP/1.1" 200 -
+2025-07-30 15:25:41,240 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:25:41] "GET /static/images/favicon.ico HTTP/1.1" 200 -
+2025-07-30 15:25:59,773 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 0/13 - 🚀 Iniciando análise ultra-detalhada...
+2025-07-30 15:25:59,775 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:25:59] "POST /api/progress/start_tracking HTTP/1.1" 200 -
+2025-07-30 15:26:00,100 - routes.analysis - INFO - 🚀 Iniciando análise de mercado ultra-detalhada
+2025-07-30 15:26:00,100 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:26:00] "GET /?segmento=telemedicina&produto=&preco=&publico=&objetivo_receita=&orcamento_marketing=&prazo_lancamento=&concorrentes=&query=&dados_adicionais= HTTP/1.1" 200 -
+2025-07-30 15:26:00,100 - routes.analysis - INFO - 📊 Dados recebidos: Segmento=telemedicina, Produto=
+2025-07-30 15:26:00,100 - routes.analysis - INFO - 🔍 Query de pesquisa: análise mercado telemedicina Brasil dados estatísticas crescimento
+2025-07-30 15:26:00,101 - routes.analysis - INFO - 🚀 Executando análise GIGANTE ultra-detalhada...
+2025-07-30 15:26:00,101 - services.ultra_detailed_analysis_engine - INFO - 🚀 Iniciando análise GIGANTE para telemedicina
+2025-07-30 15:26:00,101 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 1/13 - 🌐 Realizando pesquisa profunda massiva...
+2025-07-30 15:26:00,102 - services.production_search_manager - ERROR - ❌ GOOGLE_CSE_ID parece inválido
+2025-07-30 15:26:00,104 - services.production_search_manager - WARNING - ⚠️ google: 0 resultados
+2025-07-30 15:26:01,149 - services.production_search_manager - INFO - ✅ Serper Search: 7 resultados
+2025-07-30 15:26:01,151 - services.production_search_manager - INFO - ✅ serper: 7 resultados
+2025-07-30 15:26:02,333 - services.production_search_manager - INFO - 🔍 Bing encontrou 5 elementos
+2025-07-30 15:26:02,335 - services.production_search_manager - INFO - ✅ Bing Scraping: 5 resultados válidos
+2025-07-30 15:26:02,337 - services.production_search_manager - INFO - ✅ bing: 5 resultados
+2025-07-30 15:26:03,476 - services.production_search_manager - INFO - 🔍 DuckDuckGo encontrou 0 elementos
+2025-07-30 15:26:03,476 - services.production_search_manager - INFO - ✅ DuckDuckGo Scraping: 0 resultados válidos
+2025-07-30 15:26:03,478 - services.production_search_manager - WARNING - ⚠️ duckduckgo: 0 resultados
+2025-07-30 15:26:03,492 - services.production_search_manager - INFO - 💾 Cache salvo para query: análise mercado telemedicina Brasil dados estatíst...
+2025-07-30 15:26:03,492 - services.production_search_manager - INFO - 🎯 Busca final: 10 resultados únicos de 2 provedores
+2025-07-30 15:26:03,492 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'análise mercado telemedicina Brasil dados estatísticas crescimento': 'SearchResult' object is not subscriptable
+2025-07-30 15:26:04,461 - services.production_search_manager - INFO - ✅ Serper Search: 7 resultados
+2025-07-30 15:26:04,463 - services.production_search_manager - INFO - ✅ serper: 7 resultados
+2025-07-30 15:26:05,611 - services.production_search_manager - INFO - 🔍 Bing encontrou 6 elementos
+2025-07-30 15:26:05,612 - services.production_search_manager - INFO - ✅ Bing Scraping: 6 resultados válidos
+2025-07-30 15:26:05,613 - services.production_search_manager - INFO - ✅ bing: 6 resultados
+2025-07-30 15:26:06,157 - services.production_search_manager - INFO - 🔍 DuckDuckGo encontrou 0 elementos
+2025-07-30 15:26:06,157 - services.production_search_manager - INFO - ✅ DuckDuckGo Scraping: 0 resultados válidos
+2025-07-30 15:26:06,160 - services.production_search_manager - WARNING - ⚠️ duckduckgo: 0 resultados
+2025-07-30 15:26:06,174 - services.production_search_manager - INFO - 💾 Cache salvo para query: análise mercado telemedicina Brasil 2024 tendência...
+2025-07-30 15:26:06,174 - services.production_search_manager - INFO - 🎯 Busca final: 13 resultados únicos de 2 provedores
+2025-07-30 15:26:06,175 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'análise mercado telemedicina Brasil 2024 tendências': 'SearchResult' object is not subscriptable
+2025-07-30 15:26:07,227 - services.production_search_manager - INFO - ✅ Serper Search: 7 resultados
+2025-07-30 15:26:07,229 - services.production_search_manager - INFO - ✅ serper: 7 resultados
+2025-07-30 15:26:08,142 - services.production_search_manager - INFO - 🔍 Bing encontrou 6 elementos
+2025-07-30 15:26:08,145 - services.production_search_manager - INFO - ✅ Bing Scraping: 6 resultados válidos
+2025-07-30 15:26:08,155 - services.production_search_manager - INFO - ✅ bing: 6 resultados
+2025-07-30 15:26:09,435 - services.production_search_manager - WARNING - ⚠️ DuckDuckGo: Busca em processamento (202)
+2025-07-30 15:26:09,438 - services.production_search_manager - WARNING - ⚠️ duckduckgo: 0 resultados
+2025-07-30 15:26:09,457 - services.production_search_manager - INFO - 💾 Cache salvo para query: concorrentes telemedicina principais players...
+2025-07-30 15:26:09,457 - services.production_search_manager - INFO - 🎯 Busca final: 13 resultados únicos de 2 provedores
+2025-07-30 15:26:09,457 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'concorrentes telemedicina principais players': 'SearchResult' object is not subscriptable
+2025-07-30 15:26:10,954 - services.production_search_manager - INFO - ✅ Serper Search: 7 resultados
+2025-07-30 15:26:10,955 - services.production_search_manager - INFO - ✅ serper: 7 resultados
+2025-07-30 15:26:11,337 - services.production_search_manager - INFO - 🔍 Bing encontrou 6 elementos
+2025-07-30 15:26:11,339 - services.production_search_manager - INFO - ✅ Bing Scraping: 6 resultados válidos
+2025-07-30 15:26:11,346 - services.production_search_manager - INFO - ✅ bing: 6 resultados
+2025-07-30 15:26:11,624 - services.production_search_manager - WARNING - ⚠️ DuckDuckGo: Busca em processamento (202)
+2025-07-30 15:26:11,627 - services.production_search_manager - WARNING - ⚠️ duckduckgo: 0 resultados
+2025-07-30 15:26:11,649 - services.production_search_manager - INFO - 💾 Cache salvo para query: público-alvo telemedicina perfil demográfico...
+2025-07-30 15:26:11,649 - services.production_search_manager - INFO - 🎯 Busca final: 13 resultados únicos de 2 provedores
+2025-07-30 15:26:11,653 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'público-alvo telemedicina perfil demográfico': 'SearchResult' object is not subscriptable
+2025-07-30 15:26:12,611 - services.production_search_manager - INFO - ✅ Serper Search: 7 resultados
+2025-07-30 15:26:12,612 - services.production_search_manager - INFO - ✅ serper: 7 resultados
+2025-07-30 15:26:13,686 - services.production_search_manager - WARNING - ⚠️ DuckDuckGo: Busca em processamento (202)
+2025-07-30 15:26:13,689 - services.production_search_manager - WARNING - ⚠️ duckduckgo: 0 resultados
+2025-07-30 15:26:13,783 - services.production_search_manager - INFO - 🔍 Bing encontrou 5 elementos
+2025-07-30 15:26:13,785 - services.production_search_manager - INFO - ✅ Bing Scraping: 5 resultados válidos
+2025-07-30 15:26:13,796 - services.production_search_manager - INFO - ✅ bing: 5 resultados
+2025-07-30 15:26:13,808 - services.production_search_manager - INFO - 💾 Cache salvo para query: preços telemedicina ticket médio mercado...
+2025-07-30 15:26:13,808 - services.production_search_manager - INFO - 🎯 Busca final: 12 resultados únicos de 2 provedores
+2025-07-30 15:26:13,813 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'preços telemedicina ticket médio mercado': 'SearchResult' object is not subscriptable
+2025-07-30 15:26:15,154 - services.production_search_manager - INFO - ✅ Serper Search: 7 resultados
+2025-07-30 15:26:15,155 - services.production_search_manager - INFO - ✅ serper: 7 resultados
+2025-07-30 15:26:15,753 - services.production_search_manager - WARNING - ⚠️ DuckDuckGo: Busca em processamento (202)
+2025-07-30 15:26:15,755 - services.production_search_manager - WARNING - ⚠️ duckduckgo: 0 resultados
+2025-07-30 15:26:16,479 - services.production_search_manager - INFO - 🔍 Bing encontrou 6 elementos
+2025-07-30 15:26:16,480 - services.production_search_manager - INFO - ✅ Bing Scraping: 6 resultados válidos
+2025-07-30 15:26:16,492 - services.production_search_manager - INFO - ✅ bing: 6 resultados
+2025-07-30 15:26:16,505 - services.production_search_manager - INFO - 💾 Cache salvo para query: oportunidades telemedicina gaps mercado...
+2025-07-30 15:26:16,511 - services.production_search_manager - INFO - 🎯 Busca final: 13 resultados únicos de 2 provedores
+2025-07-30 15:26:16,511 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'oportunidades telemedicina gaps mercado': 'SearchResult' object is not subscriptable
+2025-07-30 15:26:17,504 - services.production_search_manager - INFO - ✅ Serper Search: 7 resultados
+2025-07-30 15:26:17,505 - services.production_search_manager - INFO - ✅ serper: 7 resultados
+2025-07-30 15:26:19,063 - services.production_search_manager - INFO - 🔍 Bing encontrou 6 elementos
+2025-07-30 15:26:19,065 - services.production_search_manager - INFO - ✅ Bing Scraping: 6 resultados válidos
+2025-07-30 15:26:19,076 - services.production_search_manager - INFO - ✅ bing: 6 resultados
+2025-07-30 15:26:19,393 - services.production_search_manager - WARNING - ⚠️ DuckDuckGo: Busca em processamento (202)
+2025-07-30 15:26:19,395 - services.production_search_manager - WARNING - ⚠️ duckduckgo: 0 resultados
+2025-07-30 15:26:19,417 - services.production_search_manager - INFO - 💾 Cache salvo para query: futuro telemedicina projeções crescimento...
+2025-07-30 15:26:19,417 - services.production_search_manager - INFO - 🎯 Busca final: 13 resultados únicos de 2 provedores
+2025-07-30 15:26:19,418 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'futuro telemedicina projeções crescimento': 'SearchResult' object is not subscriptable
+2025-07-30 15:26:20,432 - services.production_search_manager - INFO - ✅ Serper Search: 7 resultados
+2025-07-30 15:26:20,433 - services.production_search_manager - INFO - ✅ serper: 7 resultados
+2025-07-30 15:26:21,430 - services.production_search_manager - INFO - 🔍 Bing encontrou 6 elementos
+2025-07-30 15:26:21,433 - services.production_search_manager - INFO - ✅ Bing Scraping: 6 resultados válidos
+2025-07-30 15:26:21,444 - services.production_search_manager - INFO - ✅ bing: 6 resultados
+2025-07-30 15:26:21,749 - services.production_search_manager - WARNING - ⚠️ DuckDuckGo: Busca em processamento (202)
+2025-07-30 15:26:21,751 - services.production_search_manager - WARNING - ⚠️ duckduckgo: 0 resultados
+2025-07-30 15:26:21,773 - services.production_search_manager - INFO - 💾 Cache salvo para query: cases sucesso telemedicina empresas brasileiras...
+2025-07-30 15:26:21,777 - services.production_search_manager - INFO - 🎯 Busca final: 13 resultados únicos de 2 provedores
+2025-07-30 15:26:21,777 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'cases sucesso telemedicina empresas brasileiras': 'SearchResult' object is not subscriptable
+2025-07-30 15:26:22,727 - services.production_search_manager - INFO - ✅ Serper Search: 7 resultados
+2025-07-30 15:26:22,729 - services.production_search_manager - INFO - ✅ serper: 7 resultados
+2025-07-30 15:26:23,992 - services.production_search_manager - WARNING - ⚠️ DuckDuckGo: Busca em processamento (202)
+2025-07-30 15:26:23,994 - services.production_search_manager - WARNING - ⚠️ duckduckgo: 0 resultados
+2025-07-30 15:26:24,157 - services.production_search_manager - INFO - 🔍 Bing encontrou 5 elementos
+2025-07-30 15:26:24,158 - services.production_search_manager - INFO - ✅ Bing Scraping: 5 resultados válidos
+2025-07-30 15:26:24,170 - services.production_search_manager - INFO - ✅ bing: 5 resultados
+2025-07-30 15:26:24,183 - services.production_search_manager - INFO - 💾 Cache salvo para query: dados estatísticos telemedicina IBGE pesquisas...
+2025-07-30 15:26:24,183 - services.production_search_manager - INFO - 🎯 Busca final: 12 resultados únicos de 2 provedores
+2025-07-30 15:26:24,183 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'dados estatísticos telemedicina IBGE pesquisas': 'SearchResult' object is not subscriptable
+2025-07-30 15:26:25,250 - services.production_search_manager - INFO - ✅ Serper Search: 7 resultados
+2025-07-30 15:26:25,251 - services.production_search_manager - INFO - ✅ serper: 7 resultados
+2025-07-30 15:26:26,339 - services.production_search_manager - WARNING - ⚠️ DuckDuckGo: Busca em processamento (202)
+2025-07-30 15:26:26,342 - services.production_search_manager - WARNING - ⚠️ duckduckgo: 0 resultados
+2025-07-30 15:26:26,651 - services.production_search_manager - INFO - 🔍 Bing encontrou 7 elementos
+2025-07-30 15:26:26,653 - services.production_search_manager - INFO - ✅ Bing Scraping: 7 resultados válidos
+2025-07-30 15:26:26,663 - services.production_search_manager - INFO - ✅ bing: 7 resultados
+2025-07-30 15:26:26,676 - services.production_search_manager - INFO - 💾 Cache salvo para query: investimentos telemedicina venture capital funding...
+2025-07-30 15:26:26,677 - services.production_search_manager - INFO - 🎯 Busca final: 14 resultados únicos de 2 provedores
+2025-07-30 15:26:26,677 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'investimentos telemedicina venture capital funding': 'SearchResult' object is not subscriptable
+2025-07-30 15:26:26,677 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 2/13 - 👤 Criando avatar arqueológico ultra-detalhado...
+2025-07-30 15:26:26,680 - services.ai_manager - INFO - 🤖 Usando provedor: gemini
+2025-07-30 15:28:01,893 - services.ai_manager - INFO - ✅ Gemini gerou 8096 caracteres
+2025-07-30 15:28:01,894 - services.ultra_detailed_analysis_engine - ERROR - Erro ao parsear JSON para avatar arqueológico: Expecting value: line 1 column 1 (char 0)
+2025-07-30 15:28:01,899 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 3/13 - 🧠 Gerando drivers mentais customizados...
+2025-07-30 15:28:01,902 - services.ai_manager - INFO - 🤖 Usando provedor: gemini
+2025-07-30 15:28:09,019 - services.ai_manager - INFO - ✅ Gemini gerou 406 caracteres
+2025-07-30 15:28:09,020 - services.ultra_detailed_analysis_engine - ERROR - Erro ao parsear JSON para drivers mentais: Expecting value: line 1 column 1 (char 0)
+2025-07-30 15:28:09,025 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 4/13 - 🛡️ Construindo sistema anti-objeção...
+2025-07-30 15:28:09,026 - services.ai_manager - INFO - 🤖 Usando provedor: gemini
+2025-07-30 15:28:22,519 - services.ai_manager - INFO - ✅ Gemini gerou 4344 caracteres
+2025-07-30 15:28:22,520 - services.ultra_detailed_analysis_engine - ERROR - Erro ao parsear JSON para sistema anti-objeção: Expecting property name enclosed in double quotes: line 43 column 5 (char 3123)
+2025-07-30 15:28:22,524 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 5/13 - 🎭 Desenvolvendo provas visuais instantâneas...
+2025-07-30 15:28:22,525 - services.ai_manager - INFO - 🤖 Usando provedor: gemini
+2025-07-30 15:28:36,694 - services.ai_manager - INFO - ✅ Gemini gerou 5082 caracteres
+2025-07-30 15:28:36,695 - services.ultra_detailed_analysis_engine - ERROR - Erro ao parsear JSON para provas visuais: Expecting value: line 70 column 3 (char 3758)
+2025-07-30 15:28:36,696 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 6/13 - 🎯 Arquitetando pré-pitch invisível...
+2025-07-30 15:28:36,704 - services.ai_manager - INFO - 🤖 Usando provedor: gemini
+2025-07-30 15:33:02,189 - services.ai_manager - INFO - ✅ Gemini Flash inicializado com sucesso
+2025-07-30 15:33:02,202 - services.ai_manager - INFO - ✅ OpenAI inicializado com sucesso
+2025-07-30 15:33:02,202 - services.ai_manager - INFO - ✅ HuggingFace inicializado com sucesso
+2025-07-30 15:33:02,202 - services.ai_manager - INFO - AI Manager inicializado com 3 provedores disponíveis
+2025-07-30 15:33:02,285 - services.production_search_manager - INFO - 🚀 Production Search Manager inicializado
+2025-07-30 15:33:02,286 - services.production_search_manager - INFO - 📊 Provedores habilitados: google, serper, bing, duckduckgo
+2025-07-30 15:33:02,286 - services.content_extractor - INFO - Content Extractor inicializado com múltiplas estratégias
+2025-07-30 15:33:02,288 - services.production_content_extractor - INFO - 🚀 Production Content Extractor inicializado
+2025-07-30 15:33:02,288 - services.ultra_detailed_analysis_engine - INFO - Ultra Detailed Analysis Engine inicializado - Modo GIGANTE ativado
+2025-07-30 15:33:02,288 - services.mental_drivers_architect - INFO - Mental Drivers Architect inicializado com 19 drivers universais
+2025-07-30 15:33:02,289 - services.future_prediction_engine - INFO - Future Prediction Engine inicializado
+2025-07-30 15:33:02,289 - services.enhanced_analysis_engine - INFO - Enhanced Analysis Engine inicializado - Sistemas: {'ai_manager': True, 'search_manager': True, 'content_extractor': True}
+2025-07-30 15:33:02,819 - __main__ - INFO - 🔧 Iniciando ARQV30 Enhanced v2.0 em MODO DESENVOLVIMENTO
+2025-07-30 15:33:02,819 - __main__ - INFO - Servidor: http://0.0.0.0:5000
+2025-07-30 15:33:02,819 - __main__ - INFO - Encoding: UTF-8
+2025-07-30 15:33:02,819 - __main__ - INFO - Locale: ('pt_BR', 'UTF-8')
+2025-07-30 15:33:02,819 - __main__ - INFO - 🔍 Provedores de busca ativos: google, serper, bing, duckduckgo
+2025-07-30 15:33:02,820 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 1
+2025-07-30 15:33:02,831 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.5:5000
+2025-07-30 15:33:02,831 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 15:33:02,833 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 15:33:03,614 - services.ai_manager - INFO - ✅ Gemini Flash inicializado com sucesso
+2025-07-30 15:33:03,627 - services.ai_manager - INFO - ✅ OpenAI inicializado com sucesso
+2025-07-30 15:33:03,627 - services.ai_manager - INFO - ✅ HuggingFace inicializado com sucesso
+2025-07-30 15:33:03,628 - services.ai_manager - INFO - AI Manager inicializado com 3 provedores disponíveis
+2025-07-30 15:33:03,713 - services.production_search_manager - INFO - 🚀 Production Search Manager inicializado
+2025-07-30 15:33:03,714 - services.production_search_manager - INFO - 📊 Provedores habilitados: google, serper, bing, duckduckgo
+2025-07-30 15:33:03,715 - services.content_extractor - INFO - Content Extractor inicializado com múltiplas estratégias
+2025-07-30 15:33:03,718 - services.production_content_extractor - INFO - 🚀 Production Content Extractor inicializado
+2025-07-30 15:33:03,718 - services.ultra_detailed_analysis_engine - INFO - Ultra Detailed Analysis Engine inicializado - Modo GIGANTE ativado
+2025-07-30 15:33:03,719 - services.mental_drivers_architect - INFO - Mental Drivers Architect inicializado com 19 drivers universais
+2025-07-30 15:33:03,721 - services.future_prediction_engine - INFO - Future Prediction Engine inicializado
+2025-07-30 15:33:03,721 - services.enhanced_analysis_engine - INFO - Enhanced Analysis Engine inicializado - Sistemas: {'ai_manager': True, 'search_manager': True, 'content_extractor': True}
+2025-07-30 15:33:04,261 - __main__ - INFO - 🔧 Iniciando ARQV30 Enhanced v2.0 em MODO DESENVOLVIMENTO
+2025-07-30 15:33:04,261 - __main__ - INFO - Servidor: http://0.0.0.0:5000
+2025-07-30 15:33:04,262 - __main__ - INFO - Encoding: UTF-8
+2025-07-30 15:33:04,265 - __main__ - INFO - Locale: ('pt_BR', 'UTF-8')
+2025-07-30 15:33:04,266 - __main__ - INFO - 🔍 Provedores de busca ativos: google, serper, bing, duckduckgo
+2025-07-30 15:33:04,267 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 1
+2025-07-30 15:33:04,274 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 15:33:04,278 - werkzeug - INFO -  * Debugger PIN: 834-144-096
+2025-07-30 15:33:09,530 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:33:09] "GET / HTTP/1.1" 200 -
+2025-07-30 15:33:16,061 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 0/13 - 🚀 Iniciando análise ultra-detalhada...
+2025-07-30 15:33:16,063 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:33:16] "POST /api/progress/start_tracking HTTP/1.1" 200 -
+2025-07-30 15:33:16,073 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:33:16] "GET /?segmento=telemedicina&produto=&preco=&publico=&objetivo_receita=&orcamento_marketing=&prazo_lancamento=&concorrentes=&query=&dados_adicionais= HTTP/1.1" 200 -
+2025-07-30 15:33:16,384 - routes.analysis - INFO - 🚀 Iniciando análise de mercado ultra-detalhada
+2025-07-30 15:33:16,385 - routes.analysis - INFO - 📊 Dados recebidos: Segmento=telemedicina, Produto=
+2025-07-30 15:33:16,386 - routes.analysis - INFO - 🔍 Query de pesquisa: análise mercado telemedicina Brasil dados estatísticas crescimento
+2025-07-30 15:33:16,388 - routes.analysis - INFO - 🚀 Executando análise GIGANTE ultra-detalhada...
+2025-07-30 15:33:16,389 - services.ultra_detailed_analysis_engine - INFO - 🚀 Iniciando análise GIGANTE para telemedicina
+2025-07-30 15:33:16,390 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 1/13 - 🌐 Realizando pesquisa profunda massiva...
+2025-07-30 15:33:16,391 - services.production_search_manager - INFO - ✅ Cache hit para query: análise mercado telemedicina Brasil dados estatíst...
+2025-07-30 15:33:16,392 - services.production_search_manager - INFO - 📦 Usando resultados do cache para: análise mercado telemedicina Brasil dados estatíst...
+2025-07-30 15:33:16,392 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'análise mercado telemedicina Brasil dados estatísticas crescimento': 'SearchResult' object is not subscriptable
+2025-07-30 15:33:16,398 - services.production_search_manager - INFO - ✅ Cache hit para query: análise mercado telemedicina Brasil 2024 tendência...
+2025-07-30 15:33:16,398 - services.production_search_manager - INFO - 📦 Usando resultados do cache para: análise mercado telemedicina Brasil 2024 tendência...
+2025-07-30 15:33:16,401 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'análise mercado telemedicina Brasil 2024 tendências': 'SearchResult' object is not subscriptable
+2025-07-30 15:33:16,404 - services.production_search_manager - INFO - ✅ Cache hit para query: concorrentes telemedicina principais players...
+2025-07-30 15:33:16,404 - services.production_search_manager - INFO - 📦 Usando resultados do cache para: concorrentes telemedicina principais players...
+2025-07-30 15:33:16,405 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'concorrentes telemedicina principais players': 'SearchResult' object is not subscriptable
+2025-07-30 15:33:16,406 - services.production_search_manager - INFO - ✅ Cache hit para query: público-alvo telemedicina perfil demográfico...
+2025-07-30 15:33:16,407 - services.production_search_manager - INFO - 📦 Usando resultados do cache para: público-alvo telemedicina perfil demográfico...
+2025-07-30 15:33:16,407 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'público-alvo telemedicina perfil demográfico': 'SearchResult' object is not subscriptable
+2025-07-30 15:33:16,408 - services.production_search_manager - INFO - ✅ Cache hit para query: preços telemedicina ticket médio mercado...
+2025-07-30 15:33:16,409 - services.production_search_manager - INFO - 📦 Usando resultados do cache para: preços telemedicina ticket médio mercado...
+2025-07-30 15:33:16,414 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'preços telemedicina ticket médio mercado': 'SearchResult' object is not subscriptable
+2025-07-30 15:33:16,417 - services.production_search_manager - INFO - ✅ Cache hit para query: oportunidades telemedicina gaps mercado...
+2025-07-30 15:33:16,418 - services.production_search_manager - INFO - 📦 Usando resultados do cache para: oportunidades telemedicina gaps mercado...
+2025-07-30 15:33:16,419 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'oportunidades telemedicina gaps mercado': 'SearchResult' object is not subscriptable
+2025-07-30 15:33:16,420 - services.production_search_manager - INFO - ✅ Cache hit para query: futuro telemedicina projeções crescimento...
+2025-07-30 15:33:16,421 - services.production_search_manager - INFO - 📦 Usando resultados do cache para: futuro telemedicina projeções crescimento...
+2025-07-30 15:33:16,421 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'futuro telemedicina projeções crescimento': 'SearchResult' object is not subscriptable
+2025-07-30 15:33:16,423 - services.production_search_manager - INFO - ✅ Cache hit para query: cases sucesso telemedicina empresas brasileiras...
+2025-07-30 15:33:16,423 - services.production_search_manager - INFO - 📦 Usando resultados do cache para: cases sucesso telemedicina empresas brasileiras...
+2025-07-30 15:33:16,424 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'cases sucesso telemedicina empresas brasileiras': 'SearchResult' object is not subscriptable
+2025-07-30 15:33:16,425 - services.production_search_manager - INFO - ✅ Cache hit para query: dados estatísticos telemedicina IBGE pesquisas...
+2025-07-30 15:33:16,426 - services.production_search_manager - INFO - 📦 Usando resultados do cache para: dados estatísticos telemedicina IBGE pesquisas...
+2025-07-30 15:33:16,426 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'dados estatísticos telemedicina IBGE pesquisas': 'SearchResult' object is not subscriptable
+2025-07-30 15:33:16,430 - services.production_search_manager - INFO - ✅ Cache hit para query: investimentos telemedicina venture capital funding...
+2025-07-30 15:33:16,430 - services.production_search_manager - INFO - 📦 Usando resultados do cache para: investimentos telemedicina venture capital funding...
+2025-07-30 15:33:16,432 - services.ultra_detailed_analysis_engine - WARNING - Erro na query 'investimentos telemedicina venture capital funding': 'SearchResult' object is not subscriptable
+2025-07-30 15:33:16,434 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 2/13 - 👤 Criando avatar arqueológico ultra-detalhado...
+2025-07-30 15:33:16,437 - services.ai_manager - INFO - 🤖 Usando provedor: gemini
+2025-07-30 15:34:16,139 - services.ai_manager - ERROR - ❌ Erro no provedor gemini: Timeout of 60.0s exceeded, last exception: 503 The model is overloaded. Please try again later.
+2025-07-30 15:34:16,139 - services.ai_manager - INFO - 🔄 Tentando fallback para: openai
+2025-07-30 15:34:16,600 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-30 15:34:16,601 - openai._base_client - INFO - Retrying request to /chat/completions in 0.890726 seconds
+2025-07-30 15:34:17,846 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-30 15:34:17,846 - openai._base_client - INFO - Retrying request to /chat/completions in 1.594390 seconds
+2025-07-30 15:34:20,185 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-30 15:34:20,185 - services.ai_manager - WARNING - ⚠️ OpenAI atingiu limite de quota: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-07-30 15:34:20,186 - services.ai_manager - WARNING - ⚠️ Fallback openai falhou: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-07-30 15:34:20,186 - services.ai_manager - INFO - 🔄 Tentando fallback para: huggingface
+2025-07-30 15:34:20,464 - services.ai_manager - WARNING - ⚠️ Erro 404 no modelo microsoft/DialoGPT-medium
+2025-07-30 15:34:20,724 - services.ai_manager - WARNING - ⚠️ Erro 404 no modelo microsoft/DialoGPT-large
+2025-07-30 15:34:20,974 - services.ai_manager - WARNING - ⚠️ Erro 404 no modelo facebook/blenderbot-400M-distill
+2025-07-30 15:34:21,217 - services.ai_manager - WARNING - ⚠️ Erro 404 no modelo google/flan-t5-base
+2025-07-30 15:34:21,505 - services.ai_manager - WARNING - ⚠️ Erro 404 no modelo HuggingFaceH4/zephyr-7b-beta
+2025-07-30 15:34:21,505 - services.ai_manager - WARNING - ⚠️ Fallback huggingface falhou: Todos os modelos HuggingFace falharam
+2025-07-30 15:34:21,506 - services.ai_manager - ERROR - ❌ Todos os provedores de fallback falharam
+2025-07-30 15:34:21,507 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 3/13 - 🧠 Gerando drivers mentais customizados...
+2025-07-30 15:34:21,507 - services.ai_manager - INFO - 🤖 Usando provedor: gemini
+2025-07-30 15:34:33,044 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:34:33] "GET /?segmento=telemedicina&produto=&preco=&publico=&objetivo_receita=&orcamento_marketing=&prazo_lancamento=&concorrentes=&query=&dados_adicionais= HTTP/1.1" 200 -
+2025-07-30 15:34:33,116 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:34:33] "GET /static/css/main.css HTTP/1.1" 200 -
+2025-07-30 15:34:33,299 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:34:33] "GET /static/css/components.css HTTP/1.1" 200 -
+2025-07-30 15:34:33,364 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:34:33] "GET /static/images/logo.png HTTP/1.1" 200 -
+2025-07-30 15:34:33,365 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:34:33] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-30 15:34:33,367 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:34:33] "GET /static/js/upload.js HTTP/1.1" 200 -
+2025-07-30 15:34:33,368 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:34:33] "GET /static/js/analysis.js HTTP/1.1" 200 -
+2025-07-30 15:34:33,746 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:34:33] "GET /static/images/favicon.ico HTTP/1.1" 200 -
+2025-07-30 15:35:10,544 - services.ai_manager - INFO - ✅ Gemini gerou 7915 caracteres
+2025-07-30 15:35:10,545 - services.ultra_detailed_analysis_engine - ERROR - Erro ao parsear JSON para drivers mentais: Expecting value: line 1 column 1 (char 0)
+2025-07-30 15:35:10,547 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 4/13 - 🛡️ Construindo sistema anti-objeção...
+2025-07-30 15:35:10,551 - services.ai_manager - INFO - 🤖 Usando provedor: gemini
+2025-07-30 15:35:25,197 - services.ai_manager - INFO - ✅ Gemini gerou 7568 caracteres
+2025-07-30 15:35:25,197 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 5/13 - 🎭 Desenvolvendo provas visuais instantâneas...
+2025-07-30 15:35:25,199 - services.ai_manager - INFO - 🤖 Usando provedor: gemini
+2025-07-30 15:35:45,178 - services.ai_manager - INFO - ✅ Gemini gerou 5809 caracteres
+2025-07-30 15:35:45,178 - services.ultra_detailed_analysis_engine - ERROR - Erro ao parsear JSON para provas visuais: Expecting value: line 73 column 3 (char 3886)
+2025-07-30 15:35:45,180 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 6/13 - 🎯 Arquitetando pré-pitch invisível...
+2025-07-30 15:35:45,184 - services.ai_manager - INFO - 🤖 Usando provedor: gemini
+2025-07-30 15:35:57,101 - services.ai_manager - INFO - ✅ Gemini gerou 6334 caracteres
+2025-07-30 15:35:57,102 - services.ultra_detailed_analysis_engine - ERROR - Erro ao parsear JSON para pré-pitch invisível: Expecting value: line 69 column 9 (char 4528)
+2025-07-30 15:35:57,103 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 7/13 - ⚔️ Mapeando concorrência profunda...
+2025-07-30 15:35:57,108 - services.ai_manager - INFO - 🤖 Usando provedor: gemini
+2025-07-30 15:36:03,249 - services.ai_manager - INFO - ✅ Gemini gerou 3393 caracteres
+2025-07-30 15:36:03,250 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 8/13 - 🎯 Definindo escopo e posicionamento...
+2025-07-30 15:36:03,251 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 9/13 - 🔍 Criando estratégia de palavras-chave...
+2025-07-30 15:36:03,255 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 10/13 - 📈 Calculando métricas de performance...
+2025-07-30 15:36:03,256 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 11/13 - 🔮 Gerando projeções e cenários...
+2025-07-30 15:36:03,257 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 12/13 - 📋 Criando plano de ação detalhado...
+2025-07-30 15:36:03,258 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 13/13 - ✨ Consolidando insights exclusivos...
+2025-07-30 15:36:03,259 - services.ultra_detailed_analysis_engine - INFO - ✅ Análise GIGANTE concluída em 166.87 segundos
+2025-07-30 15:36:03,259 - routes.progress - INFO - Progress session_1753899959764_elajrez1s: Step 13/13 - 🎉 Análise concluída! Preparando resultados...
+2025-07-30 15:36:03,273 - routes.analysis - INFO - 💾 Salvando análise no banco de dados...
+2025-07-30 15:36:03,273 - database - ERROR - Erro ao criar análise: name 'get_db_client' is not defined
+2025-07-30 15:36:03,273 - routes.analysis - WARNING - ⚠️ Falha ao salvar no banco, mas análise continua
+2025-07-30 15:36:03,275 - routes.analysis - INFO - ✅ Análise concluída em 166.89 segundos
+2025-07-30 15:36:03,283 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 15:36:03] "POST /api/analyze HTTP/1.1" 200 -
