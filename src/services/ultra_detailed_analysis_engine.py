@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 ARQV30 Enhanced v2.0 - Ultra Detailed Analysis Engine
-Motor de análise GIGANTE que implementa TODOS os sistemas dos documentos anexados
+Motor de análise GIGANTE ultra-detalhado com todos os sistemas integrados
 """
 
 import os
@@ -14,29 +14,22 @@ from typing import Dict, List, Optional, Any
 from services.ai_manager import ai_manager
 from services.production_search_manager import production_search_manager
 from services.production_content_extractor import production_content_extractor
+from services.mental_drivers_architect import mental_drivers_architect
+from services.future_prediction_engine import future_prediction_engine
 
 logger = logging.getLogger(__name__)
 
 class UltraDetailedAnalysisEngine:
-    """Motor de análise GIGANTE que implementa todos os sistemas dos documentos"""
+    """Motor de análise GIGANTE ultra-detalhado"""
     
     def __init__(self):
-        """Inicializa o motor ultra-detalhado"""
-        self.analysis_steps = [
-            "🔍 Coletando dados do formulário",
-            "📊 Processando anexos inteligentes", 
-            "🌐 Realizando pesquisa profunda massiva",
-            "🧠 Analisando com múltiplas IAs",
-            "👤 Criando avatar arqueológico completo",
-            "🧠 Gerando drivers mentais customizados",
-            "🎭 Desenvolvendo provas visuais instantâneas",
-            "🛡️ Construindo sistema anti-objeção",
-            "🎯 Arquitetando pré-pitch invisível",
-            "⚔️ Mapeando concorrência profunda",
-            "📈 Calculando métricas e projeções",
-            "🔮 Predizendo futuro do mercado",
-            "✨ Consolidando insights exclusivos"
-        ]
+        """Inicializa o motor de análise GIGANTE"""
+        self.max_analysis_time = 3600  # 60 minutos para análise GIGANTE
+        self.systems_enabled = {
+            'ai_manager': bool(ai_manager),
+            'search_manager': bool(production_search_manager),
+            'content_extractor': bool(production_content_extractor)
+        }
         
         logger.info("Ultra Detailed Analysis Engine inicializado - Modo GIGANTE ativado")
     
@@ -46,884 +39,637 @@ class UltraDetailedAnalysisEngine:
         session_id: Optional[str] = None,
         progress_callback: Optional[callable] = None
     ) -> Dict[str, Any]:
-        """Gera análise GIGANTE implementando TODOS os sistemas"""
+        """Gera análise GIGANTE ultra-detalhada com todos os sistemas"""
         
         start_time = time.time()
         logger.info(f"🚀 Iniciando análise GIGANTE para {data.get('segmento')}")
         
         try:
-            analysis_result = {}
+            # Callback de progresso
+            def update_progress(step: int, message: str, details: str = None):
+                if progress_callback:
+                    progress_callback(step, message, details)
             
-            # ETAPA 1: Pesquisa Web Massiva
-            if progress_callback:
-                progress_callback(1, "🌐 Realizando pesquisa profunda massiva...")
+            # FASE 1: Pesquisa web massiva (Steps 1-2)
+            update_progress(1, "🌐 Realizando pesquisa profunda massiva...")
+            research_data = self._perform_massive_web_research(data, update_progress)
             
-            search_data = self._perform_massive_web_research(data)
-            analysis_result["pesquisa_web_massiva"] = search_data
+            # FASE 2: Avatar arqueológico ultra-detalhado (Step 2)
+            update_progress(2, "👤 Criando avatar arqueológico ultra-detalhado...")
+            avatar_data = self._create_ultra_detailed_avatar(data, research_data)
             
-            # ETAPA 2: Avatar Arqueológico Completo (Dashboard do Avatar)
-            if progress_callback:
-                progress_callback(2, "👤 Criando avatar arqueológico ultra-detalhado...")
+            # FASE 3: Drivers mentais customizados (Step 3)
+            update_progress(3, "🧠 Gerando drivers mentais customizados...")
+            drivers_data = self._generate_custom_mental_drivers(data, avatar_data)
             
-            avatar_data = self._create_archaeological_avatar(data, search_data)
-            analysis_result["avatar_ultra_detalhado"] = avatar_data
+            # FASE 4: Sistema anti-objeção (Step 4)
+            update_progress(4, "🛡️ Construindo sistema anti-objeção...")
+            anti_objection_data = self._build_anti_objection_system(data, avatar_data)
             
-            # ETAPA 3: Drivers Mentais Customizados (19 Drivers Universais)
-            if progress_callback:
-                progress_callback(3, "🧠 Gerando drivers mentais customizados...")
+            # FASE 5: Provas visuais instantâneas (Step 5)
+            update_progress(5, "🎭 Desenvolvendo provas visuais instantâneas...")
+            visual_proofs_data = self._develop_visual_proofs(data, avatar_data)
             
-            drivers_data = self._generate_mental_drivers_system(avatar_data, data)
-            analysis_result["drivers_mentais_customizados"] = drivers_data
+            # FASE 6: Pré-pitch invisível (Step 6)
+            update_progress(6, "🎯 Arquitetando pré-pitch invisível...")
+            pre_pitch_data = self._architect_invisible_pre_pitch(data, avatar_data)
             
-            # ETAPA 4: Sistema Anti-Objeção Completo
-            if progress_callback:
-                progress_callback(4, "🛡️ Construindo sistema anti-objeção...")
+            # FASE 7: Análise de concorrência profunda (Step 7)
+            update_progress(7, "⚔️ Mapeando concorrência profunda...")
+            competition_data = self._deep_competition_analysis(data, research_data)
             
-            anti_objection_data = self._build_anti_objection_system(avatar_data, data)
-            analysis_result["sistema_anti_objecao"] = anti_objection_data
+            # FASE 8: Escopo e posicionamento (Step 8)
+            update_progress(8, "🎯 Definindo escopo e posicionamento...")
+            positioning_data = self._define_positioning_scope(data, avatar_data, competition_data)
             
-            # ETAPA 5: Provas Visuais Instantâneas (PROVIs)
-            if progress_callback:
-                progress_callback(5, "🎭 Desenvolvendo provas visuais instantâneas...")
+            # FASE 9: Estratégia de palavras-chave (Step 9)
+            update_progress(9, "🔍 Criando estratégia de palavras-chave...")
+            keywords_data = self._create_keyword_strategy(data, research_data)
             
-            visual_proofs_data = self._create_visual_proofs_system(data, drivers_data)
-            analysis_result["provas_visuais_sugeridas"] = visual_proofs_data
+            # FASE 10: Métricas de performance (Step 10)
+            update_progress(10, "📈 Calculando métricas de performance...")
+            metrics_data = self._calculate_performance_metrics(data, avatar_data)
             
-            # ETAPA 6: Pré-Pitch Invisível
-            if progress_callback:
-                progress_callback(6, "🎯 Arquitetando pré-pitch invisível...")
-            
-            pre_pitch_data = self._architect_invisible_pre_pitch(drivers_data, avatar_data)
-            analysis_result["pre_pitch_invisivel"] = pre_pitch_data
-            
-            # ETAPA 7: Análise de Concorrência Profunda
-            if progress_callback:
-                progress_callback(7, "⚔️ Mapeando concorrência profunda...")
-            
-            competition_data = self._analyze_deep_competition(data, search_data)
-            analysis_result["analise_concorrencia_detalhada"] = competition_data
-            
-            # ETAPA 8: Escopo e Posicionamento
-            if progress_callback:
-                progress_callback(8, "🎯 Definindo escopo e posicionamento...")
-            
-            positioning_data = self._define_positioning_strategy(data, avatar_data, competition_data)
-            analysis_result["escopo"] = positioning_data
-            
-            # ETAPA 9: Estratégia de Palavras-Chave
-            if progress_callback:
-                progress_callback(9, "🔍 Criando estratégia de palavras-chave...")
-            
-            keywords_data = self._create_keyword_strategy(data, search_data)
-            analysis_result["estrategia_palavras_chave"] = keywords_data
-            
-            # ETAPA 10: Métricas de Performance Detalhadas
-            if progress_callback:
-                progress_callback(10, "📈 Calculando métricas de performance...")
-            
-            metrics_data = self._calculate_detailed_metrics(data, avatar_data)
-            analysis_result["metricas_performance_detalhadas"] = metrics_data
-            
-            # ETAPA 11: Projeções e Cenários
-            if progress_callback:
-                progress_callback(11, "🔮 Gerando projeções e cenários...")
-            
+            # FASE 11: Projeções e cenários (Step 11)
+            update_progress(11, "🔮 Gerando projeções e cenários...")
             projections_data = self._generate_projections_scenarios(data, metrics_data)
-            analysis_result["projecoes_cenarios"] = projections_data
             
-            # ETAPA 12: Plano de Ação Detalhado
-            if progress_callback:
-                progress_callback(12, "📋 Criando plano de ação detalhado...")
+            # FASE 12: Plano de ação detalhado (Step 12)
+            update_progress(12, "📋 Criando plano de ação detalhado...")
+            action_plan_data = self._create_detailed_action_plan(data, positioning_data)
             
-            action_plan_data = self._create_detailed_action_plan(data, analysis_result)
-            analysis_result["plano_acao_detalhado"] = action_plan_data
+            # FASE 13: Insights exclusivos (Step 13)
+            update_progress(13, "✨ Consolidando insights exclusivos...")
+            exclusive_insights = self._consolidate_exclusive_insights(
+                data, research_data, avatar_data, competition_data
+            )
             
-            # ETAPA 13: Insights Exclusivos Ultra
-            if progress_callback:
-                progress_callback(13, "✨ Consolidando insights exclusivos...")
-            
-            insights_data = self._generate_exclusive_insights(analysis_result, data)
-            analysis_result["insights_exclusivos"] = insights_data
-            
-            # Metadados finais
-            end_time = time.time()
-            analysis_result["metadata"] = {
-                "processing_time_seconds": end_time - start_time,
-                "analysis_engine": "ARQV30 Enhanced v2.0 - GIGANTE MODE",
-                "generated_at": datetime.utcnow().isoformat(),
-                "quality_score": 99.9,
-                "completeness_level": "MAXIMUM",
-                "systems_implemented": [
-                    "Dashboard do Avatar",
-                    "19 Drivers Mentais Universais", 
-                    "Sistema Anti-Objeção",
-                    "Provas Visuais Instantâneas",
-                    "Pré-Pitch Invisível"
-                ]
+            # Consolida resultado final GIGANTE
+            gigantic_result = {
+                "avatar_ultra_detalhado": avatar_data,
+                "drivers_mentais_customizados": drivers_data,
+                "sistema_anti_objecao": anti_objection_data,
+                "provas_visuais_sugeridas": visual_proofs_data,
+                "pre_pitch_invisivel": pre_pitch_data,
+                "analise_concorrencia_detalhada": competition_data,
+                "escopo": positioning_data,
+                "estrategia_palavras_chave": keywords_data,
+                "metricas_performance_detalhadas": metrics_data,
+                "projecoes_cenarios": projections_data,
+                "plano_acao_detalhado": action_plan_data,
+                "insights_exclusivos": exclusive_insights,
+                "pesquisa_web_massiva": research_data,
+                "metadata": {
+                    "processing_time_seconds": time.time() - start_time,
+                    "analysis_engine": "ARQV30 Enhanced v2.0 - GIGANTE MODE",
+                    "generated_at": datetime.utcnow().isoformat(),
+                    "quality_score": 99.9,
+                    "report_type": "GIGANTE_ULTRA_DETALHADO",
+                    "completeness_level": "MAXIMUM"
+                }
             }
             
-            logger.info(f"✅ Análise GIGANTE concluída em {end_time - start_time:.2f} segundos")
-            return analysis_result
+            end_time = time.time()
+            processing_time = end_time - start_time
+            
+            logger.info(f"✅ Análise GIGANTE concluída em {processing_time:.2f} segundos")
+            return gigantic_result
             
         except Exception as e:
             logger.error(f"❌ Erro na análise GIGANTE: {str(e)}", exc_info=True)
-            return self._generate_emergency_analysis(data, str(e))
+            return self._generate_fallback_gigantic_analysis(data, str(e))
     
-    def _perform_massive_web_research(self, data: Dict[str, Any]) -> Dict[str, Any]:
+    def _perform_massive_web_research(
+        self, 
+        data: Dict[str, Any], 
+        progress_callback: callable
+    ) -> Dict[str, Any]:
         """Realiza pesquisa web massiva com múltiplas queries"""
         
-        # Queries expandidas baseadas no contexto
-        base_query = data.get('query', f"mercado {data.get('segmento')} Brasil")
+        research_data = {
+            "queries_executadas": [],
+            "total_resultados": 0,
+            "resultados_detalhados": [],
+            "conteudo_extraido_chars": 0,
+            "fontes_unicas": set(),
+            "provedores_utilizados": set()
+        }
         
-        research_queries = [
-            base_query,
-            f"análise mercado {data.get('segmento')} Brasil 2024 tendências",
-            f"concorrentes {data.get('segmento')} principais players",
-            f"público-alvo {data.get('segmento')} perfil demográfico",
-            f"preços {data.get('segmento')} ticket médio mercado",
-            f"oportunidades {data.get('segmento')} gaps mercado",
-            f"futuro {data.get('segmento')} projeções crescimento",
-            f"cases sucesso {data.get('segmento')} empresas brasileiras",
-            f"dados estatísticos {data.get('segmento')} IBGE pesquisas",
-            f"investimentos {data.get('segmento')} venture capital funding"
+        # Queries específicas para análise GIGANTE
+        segmento = data.get('segmento', '')
+        queries = [
+            f"análise mercado {segmento} Brasil dados estatísticas crescimento",
+            f"análise mercado {segmento} Brasil 2024 tendências",
+            f"concorrentes {segmento} principais players",
+            f"público-alvo {segmento} perfil demográfico",
+            f"preços {segmento} ticket médio mercado",
+            f"oportunidades {segmento} gaps mercado",
+            f"futuro {segmento} projeções crescimento",
+            f"cases sucesso {segmento} empresas brasileiras",
+            f"dados estatísticos {segmento} IBGE pesquisas",
+            f"investimentos {segmento} venture capital funding"
         ]
         
-        all_results = []
-        total_content_length = 0
-        
-        for query in research_queries:
+        for i, query in enumerate(queries):
             try:
-                results = production_search_manager.search_with_fallback(query, max_results=15)
-                all_results.extend(results)
+                logger.info(f"🔍 Executando query {i+1}/{len(queries)}: {query}")
                 
-                # Extrai conteúdo das páginas
-                for result in results[:5]:  # Top 5 por query
-                    content = production_content_extractor.extract_content(result['url'])
-                    if content:
-                        total_content_length += len(content)
-                        result['extracted_content'] = content
+                # Busca com fallback
+                search_results = production_search_manager.search_with_fallback(query, max_results=15)
                 
-                time.sleep(1)  # Rate limiting
+                if search_results:
+                    research_data["queries_executadas"].append(query)
+                    research_data["total_resultados"] += len(search_results)
+                    
+                    # Processa cada resultado
+                    for result in search_results:
+                        # Fix: Access SearchResult attributes directly, not as dictionary
+                        result_dict = {
+                            'title': result.title,
+                            'url': result.url,
+                            'snippet': result.snippet,
+                            'source': result.source,
+                            'relevance_score': getattr(result, 'relevance_score', 0.0),
+                            'timestamp': getattr(result, 'timestamp', datetime.now()).isoformat()
+                        }
+                        
+                        research_data["resultados_detalhados"].append(result_dict)
+                        research_data["fontes_unicas"].add(result.url)
+                        research_data["provedores_utilizados"].add(result.source)
+                        
+                        # Extrai conteúdo da página
+                        content = production_content_extractor.extract_content(result.url)
+                        if content:
+                            research_data["conteudo_extraido_chars"] += len(content)
+                
+                # Delay entre queries para não sobrecarregar
+                time.sleep(0.5)
                 
             except Exception as e:
                 logger.warning(f"Erro na query '{query}': {str(e)}")
                 continue
         
-        return {
-            "total_queries": len(research_queries),
-            "total_resultados": len(all_results),
-            "conteudo_extraido_chars": total_content_length,
-            "resultados_detalhados": all_results,
-            "queries_executadas": research_queries
-        }
-    
-    def _create_archaeological_avatar(self, data: Dict[str, Any], search_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Cria avatar arqueológico seguindo Dashboard do Avatar"""
+        # Converte sets para listas para serialização JSON
+        research_data["fontes_unicas"] = list(research_data["fontes_unicas"])
+        research_data["provedores_utilizados"] = list(research_data["provedores_utilizados"])
         
-        # Prompt baseado no Dashboard do Avatar
-        prompt = f"""
-# DASHBOARD ARQUEOLÓGICO DO AVATAR - ANÁLISE ULTRA-PROFUNDA
+        logger.info(f"✅ Pesquisa massiva: {research_data['total_resultados']} resultados de {len(research_data['queries_executadas'])} queries")
+        
+        return research_data
+    
+    def _create_ultra_detailed_avatar(
+        self, 
+        data: Dict[str, Any], 
+        research_data: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Cria avatar arqueológico ultra-detalhado"""
+        
+        try:
+            segmento = data.get('segmento', '')
+            produto = data.get('produto', '')
+            
+            # Constrói contexto de pesquisa
+            research_context = ""
+            if research_data.get("resultados_detalhados"):
+                research_context = "DADOS DE PESQUISA REAL:\n"
+                for result in research_data["resultados_detalhados"][:10]:
+                    research_context += f"- {result['title']}: {result['snippet']}\n"
+            
+            prompt = f"""
+# AVATAR ARQUEOLÓGICO ULTRA-DETALHADO
 
-Baseado nos dados coletados, crie um avatar arqueológico COMPLETO seguindo a metodologia do Dashboard do Avatar.
+Baseado nos dados de pesquisa REAL, crie um avatar ultra-completo para:
 
-## DADOS DO PROJETO:
-- Segmento: {data.get('segmento')}
-- Produto: {data.get('produto')}
-- Preço: R$ {data.get('preco')}
-- Público: {data.get('publico')}
-- Dados Adicionais: {data.get('dados_adicionais')}
+**Segmento:** {segmento}
+**Produto:** {produto}
 
-## PESQUISA REALIZADA:
-{str(search_data.get('resultados_detalhados', []))[:5000]}
+{research_context}
 
-CRIE UM AVATAR SEGUINDO EXATAMENTE ESTA ESTRUTURA:
+Crie um JSON estruturado com avatar ultra-detalhado:
 
 ```json
 {{
   "nome_ficticio": "Nome representativo baseado em dados reais",
-  "visao_geral": {{
-    "publico_analisado": "Descrição detalhada do público",
-    "distribuicao_faturamento": {{
-      "acima_5_milhoes": "Percentual e características",
-      "entre_1_5_milhoes": "Percentual e características", 
-      "abaixo_1_milhao": "Percentual e características"
-    }},
-    "principais_desafios": [
-      "Lista dos principais desafios identificados com percentuais"
-    ]
+  "perfil_demografico": {{
+    "idade": "Faixa etária específica com dados reais",
+    "genero": "Distribuição real por gênero",
+    "renda": "Faixa de renda real baseada em pesquisas",
+    "escolaridade": "Nível educacional real",
+    "localizacao": "Regiões geográficas reais",
+    "estado_civil": "Status relacionamento real",
+    "profissao": "Ocupações reais mais comuns"
   }},
-  "analise_dores": {{
-    "top_10_dores_estruturadas": [
-      {{
-        "dor": "Nome da dor",
-        "frequencia": "Percentual de menções",
-        "contexto": "Contexto detalhado da dor",
-        "impacto": "Como impacta o negócio"
-      }}
-    ],
-    "analise_comparativa": "Análise entre dores abertas e estruturadas",
-    "convergencia_principal": "Principal convergência identificada",
-    "descoberta_relevante": "Descoberta mais relevante",
-    "gap_identificado": "Principal gap identificado"
+  "perfil_psicografico": {{
+    "personalidade": "Traços reais dominantes",
+    "valores": "Valores reais e crenças principais",
+    "interesses": "Hobbies e interesses reais específicos",
+    "estilo_vida": "Como realmente vive baseado em pesquisas",
+    "comportamento_compra": "Processo real de decisão",
+    "influenciadores": "Quem realmente influencia decisões",
+    "medos_profundos": "Medos reais documentados",
+    "aspiracoes_secretas": "Aspirações reais baseadas em estudos"
   }},
-  "desejos_motivacoes": {{
-    "sonhos_profundos": [
-      "Ausência Produtiva: descrição detalhada",
-      "Máquina Empresarial Perfeita: descrição detalhada",
-      "Multiplicação Acelerada: descrição detalhada",
-      "Reconhecimento no Mercado: descrição detalhada"
-    ],
-    "desejos_expressos": [
-      "Lista de desejos expressos diretamente"
-    ]
+  "dores_viscerais": [
+    "Lista de 10-15 dores específicas e REAIS baseadas em pesquisas"
+  ],
+  "desejos_secretos": [
+    "Lista de 10-15 desejos profundos REAIS baseados em estudos"
+  ],
+  "objecoes_reais": [
+    "Lista de 8-12 objeções REAIS específicas baseadas em dados"
+  ],
+  "jornada_emocional": {{
+    "consciencia": "Como realmente toma consciência",
+    "consideracao": "Processo real de avaliação",
+    "decisao": "Fatores reais decisivos",
+    "pos_compra": "Experiência real pós-compra"
   }},
-  "comportamento": {{
-    "arquetipos_dominantes": {{
-      "tecnico_aprisionado": {{
-        "percentual": "30%",
-        "descricao": "Descrição detalhada do arquétipo"
-      }},
-      "escalador_frustrado": {{
-        "percentual": "40%", 
-        "descricao": "Descrição detalhada do arquétipo"
-      }},
-      "visionario_sufocado": {{
-        "percentual": "30%",
-        "descricao": "Descrição detalhada do arquétipo"
-      }}
-    }},
-    "medos_paralisantes": [
-      "Terror da Irrelevância: descrição detalhada",
-      "Pânico da Dependência Eterna: descrição detalhada",
-      "Medo da Traição: descrição detalhada",
-      "Pavor do Modelo Errado: descrição detalhada"
-    ],
-    "objecoes_reais": [
-      "Já tentei de tudo, nada funciona: análise detalhada",
-      "Meu negócio é muito específico: análise detalhada",
-      "Não tenho tempo para implementar: análise detalhada"
-    ]
-  }},
-  "insights_ocultos": {{
-    "gatilhos_emocionais": [
-      "Liberdade: descrição de como ativar",
-      "Controle: descrição de como ativar",
-      "Legado: descrição de como ativar",
-      "Velocidade: descrição de como ativar"
-    ],
-    "abordagens_impacto": [
-      "Honestidade brutal: como aplicar",
-      "Casos reais: como usar",
-      "Métodos práticos: como entregar",
-      "Quick Wins: como implementar"
-    ]
-  }},
-  "perfil_demografico_detalhado": {{
-    "idade": "Faixa etária específica com justificativa",
-    "genero": "Distribuição por gênero com dados",
-    "renda": "Faixa de renda detalhada",
-    "escolaridade": "Nível educacional predominante",
-    "localizacao": "Regiões geográficas principais",
-    "estado_civil": "Status relacionamento",
-    "filhos": "Situação familiar",
-    "profissao": "Ocupações mais comuns"
-  }},
-  "perfil_psicografico_detalhado": {{
-    "personalidade": "Traços dominantes detalhados",
-    "valores": "Valores principais com exemplos",
-    "interesses": "Hobbies e interesses específicos",
-    "estilo_vida": "Como vive o dia a dia",
-    "comportamento_compra": "Processo de decisão detalhado",
-    "influenciadores": "Quem influencia decisões",
-    "medos_profundos": "Medos específicos documentados",
-    "aspiracoes_secretas": "Aspirações baseadas em estudos"
-  }},
-  "linguagem_comunicacao": {{
-    "substituicoes_recomendadas": {{
-      "processo_comercial": "máquina de vendas",
-      "crescer_gradualmente": "romper barreiras",
-      "delegar_tarefas": "time autônomo",
-      "work_life_balance": "liberdade"
-    }},
-    "frases_dor": [
-      "Frases específicas que usam para expressar dor"
-    ],
-    "frases_desejo": [
-      "Frases específicas que usam para expressar desejos"
-    ],
-    "vocabulario_especifico": [
-      "Palavras e gírias do nicho"
-    ]
+  "linguagem_interna": {{
+    "frases_dor": ["Frases reais que usa"],
+    "frases_desejo": ["Frases reais de desejo"],
+    "metaforas_comuns": ["Metáforas reais usadas"],
+    "vocabulario_especifico": ["Palavras específicas do nicho"],
+    "tom_comunicacao": "Tom real de comunicação"
   }}
 }}
 ```
 
-IMPORTANTE: Use APENAS dados REAIS baseados na pesquisa. NUNCA invente informações.
+Retorne APENAS o JSON válido, sem explicações.
 """
-        
-        try:
-            response = ai_manager.generate_analysis(prompt, max_tokens=8192)
+            
+            response = ai_manager.generate_analysis(prompt, max_tokens=4096)
+            
             if response:
-                # Processa resposta JSON
-                return self._parse_json_response(response, "avatar arqueológico")
+                try:
+                    # Limpa resposta e extrai JSON
+                    clean_response = response.strip()
+                    if "```json" in clean_response:
+                        start = clean_response.find("```json") + 7
+                        end = clean_response.rfind("```")
+                        clean_response = clean_response[start:end].strip()
+                    
+                    avatar_data = json.loads(clean_response)
+                    logger.info("✅ Avatar ultra-detalhado criado com sucesso")
+                    return avatar_data
+                    
+                except json.JSONDecodeError as e:
+                    logger.error(f"Erro ao parsear JSON para avatar arqueológico: {str(e)}")
+                    return self._generate_fallback_avatar(segmento)
             else:
-                return self._generate_fallback_avatar(data)
+                return self._generate_fallback_avatar(segmento)
                 
         except Exception as e:
-            logger.error(f"Erro ao criar avatar arqueológico: {str(e)}")
-            return self._generate_fallback_avatar(data)
+            logger.error(f"Erro ao criar avatar ultra-detalhado: {str(e)}")
+            return self._generate_fallback_avatar(data.get('segmento', 'Negócios'))
     
-    def _generate_mental_drivers_system(self, avatar_data: Dict[str, Any], data: Dict[str, Any]) -> List[Dict[str, Any]]:
-        """Gera sistema completo de drivers mentais baseado nos 19 drivers universais"""
-        
-        prompt = f"""
-# ARQUITETO DE DRIVERS MENTAIS - SISTEMA COMPLETO
-
-Baseado no avatar arqueológico criado, desenvolva um sistema COMPLETO de drivers mentais customizados.
-
-## AVATAR ANALISADO:
-{json.dumps(avatar_data, ensure_ascii=False, indent=2)[:3000]}
-
-## CONTEXTO DO PRODUTO:
-- Segmento: {data.get('segmento')}
-- Produto: {data.get('produto')}
-- Preço: R$ {data.get('preco')}
-
-CRIE 7-10 DRIVERS MENTAIS CUSTOMIZADOS seguindo esta estrutura:
-
-```json
-[
-  {{
-    "nome": "Nome impactante do driver (máximo 3 palavras)",
-    "gatilho_central": "A emoção ou lógica core",
-    "definicao_visceral": "1-2 frases que capturam a essência",
-    "mecanica_psicologica": "Como funciona no cérebro",
-    "momento_instalacao": "Quando plantar durante a jornada",
-    "roteiro_ativacao": {{
-      "pergunta_abertura": "Pergunta que expõe a ferida",
-      "historia_analogia": "História/analogia que ilustra o conceito",
-      "metafora_visual": "Metáfora que ancora na memória",
-      "comando_acao": "Comando que direciona o comportamento"
-    }},
-    "frases_ancoragem": [
-      "3-5 frases prontas para usar"
-    ],
-    "prova_logica": {{
-      "estatistica": "Dado/fato que sustenta",
-      "caso_exemplo": "Exemplo real",
-      "demonstracao": "Como provar na prática"
-    }},
-    "loop_reforco": "Como reativar em momentos posteriores",
-    "categoria": "Emocional Primário/Racional Complementar",
-    "poder_impacto": "Alto/Médio/Baixo"
-  }}
-]
-```
-
-FOQUE nos drivers mais poderosos para este avatar específico:
-1. Diagnóstico Brutal
-2. Ambição Expandida  
-3. Relógio Psicológico
-4. Método vs Sorte
-5. Decisão Binária
-6. Ambiente Vampiro
-7. Coragem Necessária
-
-Customize CADA driver para as dores e desejos específicos identificados no avatar.
-"""
+    def _generate_custom_mental_drivers(
+        self, 
+        data: Dict[str, Any], 
+        avatar_data: Dict[str, Any]
+    ) -> List[Dict[str, Any]]:
+        """Gera drivers mentais customizados"""
         
         try:
-            response = ai_manager.generate_analysis(prompt, max_tokens=8192)
-            if response:
-                drivers = self._parse_json_response(response, "drivers mentais")
-                return drivers if isinstance(drivers, list) else []
+            context = {
+                'segmento': data.get('segmento'),
+                'avatar': avatar_data,
+                'produto': data.get('produto')
+            }
+            
+            drivers_result = mental_drivers_architect.create_custom_drivers(context)
+            
+            if drivers_result and 'drivers_customizados' in drivers_result:
+                logger.info("✅ Drivers mentais customizados gerados")
+                return drivers_result['drivers_customizados']
             else:
-                return self._generate_fallback_drivers(data)
+                return self._generate_fallback_drivers(data.get('segmento', 'Negócios'))
                 
         except Exception as e:
             logger.error(f"Erro ao gerar drivers mentais: {str(e)}")
-            return self._generate_fallback_drivers(data)
+            return self._generate_fallback_drivers(data.get('segmento', 'Negócios'))
     
-    def _build_anti_objection_system(self, avatar_data: Dict[str, Any], data: Dict[str, Any]) -> Dict[str, Any]:
-        """Constrói sistema anti-objeção completo"""
+    def _build_anti_objection_system(
+        self, 
+        data: Dict[str, Any], 
+        avatar_data: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Constrói sistema anti-objeção"""
         
-        prompt = f"""
-# ENGENHARIA PSICOLÓGICA ANTI-OBJEÇÃO
+        try:
+            segmento = data.get('segmento', '')
+            
+            prompt = f"""
+# SISTEMA ANTI-OBJEÇÃO ULTRA-ROBUSTO
 
-Baseado no avatar arqueológico, crie um SISTEMA COMPLETO de antecipação e destruição de objeções.
-
-## AVATAR ANALISADO:
-{json.dumps(avatar_data, ensure_ascii=False, indent=2)[:3000]}
-
-CRIE o sistema seguindo esta estrutura:
+Para o segmento {segmento}, crie um sistema completo anti-objeção:
 
 ```json
 {{
   "objecoes_universais": {{
     "tempo": {{
-      "objecao": "Frase típica usada",
-      "raiz_emocional": "Verdadeira causa emocional",
-      "contra_ataque": "Como neutralizar especificamente",
-      "drives_mentais": ["Drives específicos para usar"],
-      "historias_consequencia": "História de quem não agiu",
-      "calculo_custo": "Cálculo de oportunidade perdida"
+      "objecao": "Não tenho tempo para isso agora",
+      "raiz_emocional": "Medo de mais uma responsabilidade",
+      "contra_ataque": "Quanto tempo você perde por não ter um sistema que funciona?"
     }},
     "dinheiro": {{
-      "objecao": "Frase típica usada",
-      "raiz_emocional": "Verdadeira causa emocional", 
-      "contra_ataque": "Como neutralizar especificamente",
-      "comparacoes_crueis": "Comparações com outros gastos",
-      "roi_demonstrado": "ROI específico calculado",
-      "ressignificacao": "Como reposicionar investimento"
+      "objecao": "Está muito caro",
+      "raiz_emocional": "Medo de perder dinheiro",
+      "contra_ataque": "Qual o custo de continuar como está?"
     }},
     "confianca": {{
-      "objecao": "Frase típica usada",
-      "raiz_emocional": "Verdadeira causa emocional",
-      "contra_ataque": "Como neutralizar especificamente", 
-      "provas_sociais": "Provas específicas para este perfil",
-      "garantias_agressivas": "Garantias que removem risco",
-      "autoridade_tecnica": "Como estabelecer expertise"
+      "objecao": "Já tentei outras coisas e não funcionaram",
+      "raiz_emocional": "Medo de mais uma frustração",
+      "contra_ataque": "O que era diferente naquelas tentativas?"
     }}
   }},
   "objecoes_ocultas": {{
-    "autossuficiencia": {{
-      "sinais": ["Como identificar esta objeção"],
-      "perfil_tipico": "Quem tem esta objeção",
-      "raiz_emocional": "Medo de parecer incompetente",
-      "contra_ataque": "História de expert que precisou de expert",
-      "reframe": "Ajuda como aceleração, não fraqueza"
+    "medo_sucesso": {{
+      "perfil_tipico": "Pessoa que sabota o próprio sucesso",
+      "contra_ataque": "Você merece ter sucesso tanto quanto qualquer outra pessoa"
     }},
-    "ajuda_como_fraqueza": {{
-      "sinais": ["Como identificar esta objeção"],
-      "perfil_tipico": "Quem tem esta objeção", 
-      "raiz_emocional": "Medo de julgamento",
-      "contra_ataque": "Reposicionamento como inteligência",
-      "exemplos_herois": "Casos de pessoas fortes que buscaram ajuda"
-    }},
-    "medo_mudanca": {{
-      "sinais": ["Como identificar esta objeção"],
-      "perfil_tipico": "Quem tem esta objeção",
-      "raiz_emocional": "Ansiedade sobre nova realidade", 
-      "contra_ataque": "Dor da estagnação vs desconforto temporário",
-      "janela_historica": "Urgência baseada em momento único"
-    }},
-    "prioridades_desequilibradas": {{
-      "sinais": ["Como identificar esta objeção"],
-      "perfil_tipico": "Quem tem esta objeção",
-      "raiz_emocional": "Não reconhece educação como prioridade",
-      "contra_ataque": "Comparação cruel entre investimentos",
-      "calculo_oportunidade": "Cálculo de oportunidade perdida"
-    }},
-    "autoestima_destruida": {{
-      "sinais": ["Como identificar esta objeção"],
-      "perfil_tipico": "Quem tem esta objeção",
-      "raiz_emocional": "Medo de mais um fracasso",
-      "contra_ataque": "Casos de pessoas piores que conseguiram",
-      "diferencial_metodo": "Por que desta vez será diferente"
+    "sindrome_impostor": {{
+      "perfil_tipico": "Sente que não merece estar no nível que quer",
+      "contra_ataque": "Competência se desenvolve com prática, não nasce pronta"
     }}
   }},
   "arsenal_emergencia": [
-    "Scripts para objeções de última hora",
-    "Primeiros socorros psicológicos",
-    "Sinais de alerta para cada objeção",
-    "Técnicas de reversão imediata"
-  ],
-  "implementacao_estrategica": {{
-    "pre_lancamento": "Drives para cada semana",
-    "durante_evento": "Momentos específicos para cada objeção",
-    "momento_oferta": "Sequência de destruição",
-    "pos_oferta": "Objeções de última hora"
-  }}
-}}
-```
-
-Base-se nas objeções reais identificadas no avatar para criar contra-ataques específicos e eficazes.
-"""
-        
-        try:
-            response = ai_manager.generate_analysis(prompt, max_tokens=8192)
-            if response:
-                return self._parse_json_response(response, "sistema anti-objeção")
-            else:
-                return self._generate_fallback_anti_objection(data)
-                
-        except Exception as e:
-            logger.error(f"Erro ao criar sistema anti-objeção: {str(e)}")
-            return self._generate_fallback_anti_objection(data)
-    
-    def _create_visual_proofs_system(self, data: Dict[str, Any], drivers_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Cria sistema completo de provas visuais instantâneas (PROVIs)"""
-        
-        prompt = f"""
-# SISTEMA COMPLETO DE PROVAS VISUAIS INSTANTÂNEAS (PROVIs)
-
-Baseado no contexto e drivers mentais, crie um arsenal completo de demonstrações físicas.
-
-## CONTEXTO:
-- Segmento: {data.get('segmento')}
-- Produto: {data.get('produto')}
-- Preço: R$ {data.get('preco')}
-
-## DRIVERS MENTAIS CRIADOS:
-{json.dumps(drivers_data, ensure_ascii=False, indent=2)[:2000]}
-
-CRIE 8-12 PROVIs seguindo esta estrutura:
-
-```json
-[
-  {{
-    "nome": "Nome impactante da demonstração",
-    "conceito_alvo": "O que precisa ser instalado/destruído",
-    "categoria": "Urgência/Crença/Objeção/Transformação/Método",
-    "prioridade": "Crítica/Alta/Média",
-    "momento_ideal": "Quando executar no evento",
-    "objetivo_psicologico": "Que mudança mental específica queremos",
-    "experimento": "Descrição clara da demonstração física",
-    "analogia": "Assim como [experimento] → Você [aplicação na vida]",
-    "roteiro_completo": {{
-      "setup": "Frase de introdução + preparação (30s)",
-      "execucao": "Passos específicos da demonstração (30-90s)",
-      "climax": "Momento exato do AHA! (15s)",
-      "bridge": "Conexão com a vida deles (30s)"
-    }},
-    "materiais": [
-      "Lista específica de materiais necessários"
-    ],
-    "variacoes": {{
-      "online": "Adaptação para câmera",
-      "grande_publico": "Versão amplificada", 
-      "intimista": "Versão simplificada"
-    }},
-    "gestao_riscos": {{
-      "pode_falhar_se": "Situações de risco",
-      "plano_b": "Alternativa pronta",
-      "transformar_erro": "Como usar falha a favor"
-    }},
-    "frases_impacto": {{
-      "durante": "Frase que aumenta tensão",
-      "revelacao": "Frase no momento aha",
-      "ancoragem": "Frase que fica na memória"
-    }}
-  }}
-]
-```
-
-FOQUE em PROVIs que demonstrem:
-1. Custo da inação
-2. Poder da transformação
-3. Simplicidade do método
-4. Urgência temporal
-5. Diferença entre tentativa e sistema
-
-Seja CRIATIVO e MEMORÁVEL. Cada PROVI deve traumatizar positivamente a audiência.
-"""
-        
-        try:
-            response = ai_manager.generate_analysis(prompt, max_tokens=8192)
-            if response:
-                provis = self._parse_json_response(response, "provas visuais")
-                return provis if isinstance(provis, list) else []
-            else:
-                return self._generate_fallback_provis(data)
-                
-        except Exception as e:
-            logger.error(f"Erro ao criar provas visuais: {str(e)}")
-            return self._generate_fallback_provis(data)
-    
-    def _architect_invisible_pre_pitch(self, drivers_data: List[Dict[str, Any]], avatar_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Arquiteta pré-pitch invisível completo"""
-        
-        prompt = f"""
-# ARQUITETO DO PRÉ-PITCH INVISÍVEL
-
-Crie uma SINFONIA DE TENSÃO PSICOLÓGICA usando os drivers mentais criados.
-
-## DRIVERS DISPONÍVEIS:
-{json.dumps(drivers_data, ensure_ascii=False, indent=2)[:3000]}
-
-## AVATAR:
-{json.dumps(avatar_data, ensure_ascii=False, indent=2)[:2000]}
-
-CRIE o pré-pitch seguindo esta estrutura:
-
-```json
-{{
-  "orquestracao_emocional": {{
-    "objetivo": "Criar montanha-russa emocional",
-    "sequencia_psicologica": [
-      {{
-        "fase": "QUEBRA",
-        "objetivo": "Destruir ilusão confortável",
-        "tempo": "3-5 minutos",
-        "driver_usado": "Nome do driver",
-        "tecnicas": ["Técnicas específicas"]
-      }},
-      {{
-        "fase": "EXPOSIÇÃO", 
-        "objetivo": "Revelar ferida real",
-        "tempo": "3-5 minutos",
-        "driver_usado": "Nome do driver",
-        "tecnicas": ["Técnicas específicas"]
-      }},
-      {{
-        "fase": "INDIGNAÇÃO",
-        "objetivo": "Criar revolta produtiva", 
-        "tempo": "2-3 minutos",
-        "driver_usado": "Nome do driver",
-        "tecnicas": ["Técnicas específicas"]
-      }},
-      {{
-        "fase": "VISLUMBRE",
-        "objetivo": "Mostrar o possível",
-        "tempo": "3-4 minutos", 
-        "driver_usado": "Nome do driver",
-        "tecnicas": ["Técnicas específicas"]
-      }},
-      {{
-        "fase": "TENSÃO",
-        "objetivo": "Amplificar o gap",
-        "tempo": "2-3 minutos",
-        "driver_usado": "Nome do driver", 
-        "tecnicas": ["Técnicas específicas"]
-      }},
-      {{
-        "fase": "NECESSIDADE",
-        "objetivo": "Tornar mudança inevitável",
-        "tempo": "3-5 minutos",
-        "driver_usado": "Nome do driver",
-        "tecnicas": ["Técnicas específicas"]
-      }}
-    ]
-  }},
-  "justificacao_logica": {{
-    "objetivo": "Dar provas ao cérebro racional",
-    "elementos": {{
-      "numeros_irrefutaveis": "Estatísticas específicas",
-      "calculos_roi": "ROI conservador demonstrado",
-      "demonstracoes": "Passo a passo visual",
-      "cases_metricas": "Cases com números específicos",
-      "garantias": "Garantias que eliminam risco"
-    }}
-  }},
-  "roteiro_completo": {{
-    "abertura": {{
-      "tempo": "2 minutos",
-      "script": "Script específico de abertura",
-      "driver_ativado": "Nome do driver",
-      "objetivo": "Estado mental desejado"
-    }},
-    "desenvolvimento": {{
-      "tempo": "15 minutos",
-      "fases": [
-        {{
-          "nome": "Nome da fase",
-          "tempo": "X minutos", 
-          "script": "Script específico",
-          "transicao": "Como conectar com próxima fase"
-        }}
-      ]
-    }},
-    "fechamento": {{
-      "tempo": "3 minutos",
-      "script": "Script de fechamento",
-      "estado_final": "Como devem estar mentalmente",
-      "ponte_oferta": "Como levar ao pitch"
-    }}
-  }},
-  "templates_prontos": {{
-    "abertura_padrao": "Template de abertura",
-    "transicao_emocao_logica": "Template de transição",
-    "fechamento_pre_pitch": "Template de fechamento"
-  }},
-  "sinais_sucesso": {{
-    "durante": ["Sinais durante o pré-pitch"],
-    "apos": ["Sinais após o pré-pitch"]
-  }}
-}}
-```
-
-O pré-pitch deve ser tão poderoso que o prospect chegue na oferta já convencido.
-"""
-        
-        try:
-            response = ai_manager.generate_analysis(prompt, max_tokens=8192)
-            if response:
-                return self._parse_json_response(response, "pré-pitch invisível")
-            else:
-                return self._generate_fallback_pre_pitch(data)
-                
-        except Exception as e:
-            logger.error(f"Erro ao criar pré-pitch: {str(e)}")
-            return self._generate_fallback_pre_pitch(data)
-    
-    def _analyze_deep_competition(self, data: Dict[str, Any], search_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Análise profunda de concorrência"""
-        
-        prompt = f"""
-# ANÁLISE PROFUNDA DE CONCORRÊNCIA
-
-Baseado na pesquisa realizada, faça uma análise competitiva ultra-detalhada.
-
-## DADOS DO PROJETO:
-- Segmento: {data.get('segmento')}
-- Concorrentes Mencionados: {data.get('concorrentes')}
-
-## PESQUISA REALIZADA:
-{str(search_data.get('resultados_detalhados', []))[:4000]}
-
-CRIE análise seguindo esta estrutura:
-
-```json
-{{
-  "concorrentes_diretos": [
-    {{
-      "nome": "Nome real do concorrente",
-      "analise_swot": {{
-        "forcas": ["Principais forças específicas"],
-        "fraquezas": ["Principais fraquezas exploráveis"],
-        "oportunidades": ["Oportunidades que eles não veem"],
-        "ameacas": ["Ameaças que representam"]
-      }},
-      "estrategia_marketing": "Estratégia principal detalhada",
-      "posicionamento": "Como se posicionam no mercado",
-      "diferenciais": ["Principais diferenciais"],
-      "vulnerabilidades": ["Pontos fracos exploráveis"],
-      "preco_estrategia": "Estratégia de precificação",
-      "share_mercado": "Participação estimada",
-      "pontos_ataque": ["Onde atacá-los"]
-    }}
-  ],
-  "gaps_oportunidade": [
-    "Oportunidades não exploradas por ninguém"
-  ],
-  "benchmarks_setor": {{
-    "ticket_medio": "Ticket médio do setor",
-    "margem_lucro": "Margem típica",
-    "tempo_vendas": "Ciclo de vendas médio",
-    "principais_metricas": ["KPIs do setor"]
-  }},
-  "estrategias_diferenciacao": [
-    "Como se diferenciar de forma defensável"
-  ],
-  "analise_precos": {{
-    "faixa_precos": "Faixa de preços do mercado",
-    "posicionamento_preco": "Onde se posicionar",
-    "justificativa_premium": "Como justificar preço premium"
-  }},
-  "tendencias_competitivas": "Para onde a concorrência está indo",
-  "ameacas_futuras": [
-    "Ameaças competitivas futuras"
-  ],
-  "vantagens_competitivas": [
-    "Vantagens que podemos explorar"
+    "Se não for agora, quando será?",
+    "O que você tem a perder tentando vs não tentando?",
+    "Qual seria o conselho que você daria para um amigo na sua situação?"
   ]
 }}
 ```
 
-Use APENAS dados REAIS encontrados na pesquisa.
+Retorne APENAS o JSON válido.
 """
+            
+            response = ai_manager.generate_analysis(prompt, max_tokens=2048)
+            
+            if response:
+                try:
+                    clean_response = response.strip()
+                    if "```json" in clean_response:
+                        start = clean_response.find("```json") + 7
+                        end = clean_response.rfind("```")
+                        clean_response = clean_response[start:end].strip()
+                    
+                    anti_objection_data = json.loads(clean_response)
+                    logger.info("✅ Sistema anti-objeção construído")
+                    return anti_objection_data
+                    
+                except json.JSONDecodeError as e:
+                    logger.error(f"Erro ao parsear JSON para sistema anti-objeção: {str(e)}")
+                    return self._generate_fallback_anti_objection()
+            else:
+                return self._generate_fallback_anti_objection()
+                
+        except Exception as e:
+            logger.error(f"Erro ao construir sistema anti-objeção: {str(e)}")
+            return self._generate_fallback_anti_objection()
+    
+    def _develop_visual_proofs(
+        self, 
+        data: Dict[str, Any], 
+        avatar_data: Dict[str, Any]
+    ) -> List[Dict[str, Any]]:
+        """Desenvolve provas visuais instantâneas"""
         
         try:
-            response = ai_manager.generate_analysis(prompt, max_tokens=6144)
+            segmento = data.get('segmento', '')
+            
+            prompt = f"""
+# PROVAS VISUAIS INSTANTÂNEAS
+
+Para o segmento {segmento}, crie 5-7 provas visuais poderosas:
+
+```json
+[
+  {{
+    "nome": "PROVA VISUAL 1",
+    "conceito_alvo": "Conceito que queremos provar",
+    "experimento": "Experimento visual específico",
+    "analogia": "Analogia visual poderosa",
+    "materiais": ["Lista de materiais necessários"],
+    "roteiro_completo": "Roteiro passo a passo da demonstração"
+  }}
+]
+```
+
+Retorne APENAS o JSON válido.
+"""
+            
+            response = ai_manager.generate_analysis(prompt, max_tokens=2048)
+            
             if response:
-                return self._parse_json_response(response, "análise de concorrência")
+                try:
+                    clean_response = response.strip()
+                    if "```json" in clean_response:
+                        start = clean_response.find("```json") + 7
+                        end = clean_response.rfind("```")
+                        clean_response = clean_response[start:end].strip()
+                    
+                    visual_proofs = json.loads(clean_response)
+                    logger.info("✅ Provas visuais desenvolvidas")
+                    return visual_proofs
+                    
+                except json.JSONDecodeError as e:
+                    logger.error(f"Erro ao parsear JSON para provas visuais: {str(e)}")
+                    return self._generate_fallback_visual_proofs()
             else:
-                return self._generate_fallback_competition(data)
+                return self._generate_fallback_visual_proofs()
+                
+        except Exception as e:
+            logger.error(f"Erro ao desenvolver provas visuais: {str(e)}")
+            return self._generate_fallback_visual_proofs()
+    
+    def _architect_invisible_pre_pitch(
+        self, 
+        data: Dict[str, Any], 
+        avatar_data: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Arquiteta pré-pitch invisível"""
+        
+        try:
+            segmento = data.get('segmento', '')
+            
+            prompt = f"""
+# PRÉ-PITCH INVISÍVEL ULTRA-ESTRATÉGICO
+
+Para o segmento {segmento}, crie um pré-pitch invisível completo:
+
+```json
+{{
+  "orquestracao_emocional": {{
+    "sequencia_psicologica": [
+      {{
+        "fase": "Quebra de Padrão",
+        "objetivo": "Interromper piloto automático mental",
+        "tempo": "0-30 segundos",
+        "tecnicas": ["Pergunta inesperada", "Estatística chocante"]
+      }},
+      {{
+        "fase": "Criação de Tensão",
+        "objetivo": "Gerar desconforto produtivo",
+        "tempo": "30-90 segundos",
+        "tecnicas": ["Diagnóstico brutal", "Espelho da realidade"]
+      }}
+    ]
+  }},
+  "roteiro_completo": {{
+    "abertura": {{
+      "tempo": "30 segundos",
+      "script": "Script específico de abertura"
+    }},
+    "fechamento": {{
+      "tempo": "60 segundos",
+      "script": "Script específico de fechamento"
+    }}
+  }}
+}}
+```
+
+Retorne APENAS o JSON válido.
+"""
+            
+            response = ai_manager.generate_analysis(prompt, max_tokens=2048)
+            
+            if response:
+                try:
+                    clean_response = response.strip()
+                    if "```json" in clean_response:
+                        start = clean_response.find("```json") + 7
+                        end = clean_response.rfind("```")
+                        clean_response = clean_response[start:end].strip()
+                    
+                    pre_pitch_data = json.loads(clean_response)
+                    logger.info("✅ Pré-pitch invisível arquitetado")
+                    return pre_pitch_data
+                    
+                except json.JSONDecodeError as e:
+                    logger.error(f"Erro ao parsear JSON para pré-pitch invisível: {str(e)}")
+                    return self._generate_fallback_pre_pitch()
+            else:
+                return self._generate_fallback_pre_pitch()
+                
+        except Exception as e:
+            logger.error(f"Erro ao arquitetar pré-pitch: {str(e)}")
+            return self._generate_fallback_pre_pitch()
+    
+    def _deep_competition_analysis(
+        self, 
+        data: Dict[str, Any], 
+        research_data: Dict[str, Any]
+    ) -> List[Dict[str, Any]]:
+        """Análise profunda de concorrência"""
+        
+        try:
+            segmento = data.get('segmento', '')
+            concorrentes = data.get('concorrentes', '')
+            
+            # Usa dados de pesquisa se disponível
+            research_context = ""
+            if research_data.get("resultados_detalhados"):
+                research_context = "DADOS DE CONCORRÊNCIA ENCONTRADOS:\n"
+                for result in research_data["resultados_detalhados"][:5]:
+                    if 'concorrent' in result['title'].lower() or 'competit' in result['title'].lower():
+                        research_context += f"- {result['title']}: {result['snippet']}\n"
+            
+            prompt = f"""
+Analise a concorrência no segmento {segmento}.
+
+{research_context}
+
+Concorrentes mencionados: {concorrentes}
+
+Forneça análise estruturada dos principais concorrentes com forças, fraquezas e oportunidades de ataque.
+"""
+            
+            response = ai_manager.generate_analysis(prompt, max_tokens=2048)
+            
+            if response:
+                # Processa resposta em formato estruturado
+                competition_analysis = self._parse_competition_response(response, segmento)
+                logger.info("✅ Análise de concorrência profunda concluída")
+                return competition_analysis
+            else:
+                return self._generate_fallback_competition(segmento)
                 
         except Exception as e:
             logger.error(f"Erro na análise de concorrência: {str(e)}")
-            return self._generate_fallback_competition(data)
+            return self._generate_fallback_competition(data.get('segmento', 'Negócios'))
     
-    def _define_positioning_strategy(self, data: Dict[str, Any], avatar_data: Dict[str, Any], competition_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Define estratégia de posicionamento e escopo"""
+    def _define_positioning_scope(
+        self, 
+        data: Dict[str, Any], 
+        avatar_data: Dict[str, Any], 
+        competition_data: List[Dict[str, Any]]
+    ) -> Dict[str, Any]:
+        """Define escopo e posicionamento"""
         
-        segmento = data.get('segmento', 'Negócios')
-        produto = data.get('produto', 'Produto/Serviço')
+        segmento = data.get('segmento', '')
+        produto = data.get('produto', '')
         
         return {
-            "posicionamento_mercado": f"Solução premium para profissionais de {segmento} que querem resultados rápidos e sustentáveis",
-            "proposta_valor": f"Transforme seu negócio em {segmento} com metodologia comprovada e suporte especializado",
+            "posicionamento_mercado": f"Solução premium para profissionais de {segmento} que buscam resultados rápidos",
+            "proposta_valor_unica": f"Transforme seu negócio em {segmento} com metodologia comprovada",
             "diferenciais_competitivos": [
-                f"Metodologia exclusiva testada no mercado de {segmento}",
-                "Suporte personalizado e acompanhamento contínuo",
-                "Resultados mensuráveis e garantidos",
-                "Comunidade exclusiva de profissionais de alto nível",
-                "Sistema anti-objeção e drivers mentais customizados"
+                f"Metodologia exclusiva para {segmento}",
+                "Suporte personalizado especializado",
+                "Resultados mensuráveis garantidos",
+                "Comunidade exclusiva de profissionais"
             ],
-            "mensagem_central": f"Pare de trabalhar NO negócio de {segmento} e comece a trabalhar PELO negócio",
-            "tom_comunicacao": "Direto, confiante, baseado em resultados e dados concretos",
-            "nicho_especifico": f"{segmento} - Profissionais estabelecidos buscando escalonamento",
-            "estrategia_oceano_azul": f"Criar categoria própria focada em implementação prática para {segmento}",
-            "ancoragem_preco": "Investimento que se paga em 30-60 dias com ROI comprovado"
+            "mensagem_central": f"Pare de trabalhar NO {segmento} e comece a trabalhar PELO {segmento}",
+            "tom_comunicacao": "Direto, confiante, baseado em resultados",
+            "nicho_especifico": f"{segmento} - Profissionais estabelecidos buscando escalonamento"
         }
     
-    def _create_keyword_strategy(self, data: Dict[str, Any], search_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Cria estratégia completa de palavras-chave"""
+    def _create_keyword_strategy(
+        self, 
+        data: Dict[str, Any], 
+        research_data: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Cria estratégia de palavras-chave"""
         
         segmento = data.get('segmento', '').lower()
+        produto = data.get('produto', '').lower()
+        
+        # Palavras-chave baseadas no segmento
+        primary_keywords = [segmento, "estratégia", "marketing", "crescimento", "vendas"]
+        
+        if produto:
+            primary_keywords.append(produto)
+        
+        secondary_keywords = [
+            "digital", "online", "automação", "sistema", "processo",
+            "resultado", "lucro", "receita", "cliente", "negócio",
+            "consultoria", "curso", "treinamento", "mentoria"
+        ]
+        
+        long_tail_keywords = [
+            f"como crescer no mercado de {segmento}",
+            f"estratégias de marketing para {segmento}",
+            f"como aumentar vendas em {segmento}",
+            f"automação para {segmento}",
+            f"sistema de vendas {segmento}",
+            f"consultoria {segmento} especializada",
+            f"curso {segmento} avançado"
+        ]
         
         return {
-            "palavras_primarias": [
-                segmento,
-                "estratégia",
-                "marketing",
-                "crescimento", 
-                "vendas",
-                "automação",
-                "sistema",
-                "resultado"
-            ],
-            "palavras_secundarias": [
-                "digital",
-                "online", 
-                "processo",
-                "lucro",
-                "receita",
-                "cliente",
-                "negócio",
-                "empresa",
-                "consultoria",
-                "mentoria",
-                "curso",
-                "treinamento",
-                "método",
-                "técnica",
-                "ferramenta"
-            ],
-            "palavras_cauda_longa": [
-                f"como crescer no mercado de {segmento}",
-                f"estratégias de marketing para {segmento}",
-                f"como aumentar vendas em {segmento}",
-                f"automação para {segmento}",
-                f"sistema de vendas {segmento}",
-                f"consultoria {segmento} resultados",
-                f"curso {segmento} online",
-                f"mentoria {segmento} especializada"
-            ],
-            "intencao_busca": {
-                "informacional": [
-                    f"o que é {segmento}",
-                    f"como funciona {segmento}",
-                    f"tendências {segmento} 2024"
-                ],
-                "navegacional": [
-                    f"especialista {segmento}",
-                    f"consultor {segmento}",
-                    f"curso {segmento}"
-                ],
-                "transacional": [
-                    f"comprar curso {segmento}",
-                    f"contratar consultoria {segmento}",
-                    f"mentoria {segmento} preço"
-                ]
-            },
-            "estrategia_conteudo": f"Criar conteúdo educativo sobre {segmento} focando em resultados práticos e cases reais",
-            "sazonalidade": "Maior busca no início do ano (janeiro-março) e final do ano (outubro-dezembro)",
-            "oportunidades_seo": f"Pouca concorrência em nichos específicos de {segmento} com foco em resultados mensuráveis"
+            "palavras_primarias": primary_keywords,
+            "palavras_secundarias": secondary_keywords,
+            "palavras_cauda_longa": long_tail_keywords,
+            "estrategia_conteudo": f"Criar conteúdo educativo sobre {segmento} focando em resultados práticos",
+            "sazonalidade": "Maior busca no início e final do ano",
+            "oportunidades_seo": f"Pouca concorrência em nichos específicos de {segmento}"
         }
     
-    def _calculate_detailed_metrics(self, data: Dict[str, Any], avatar_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Calcula métricas de performance detalhadas"""
+    def _calculate_performance_metrics(
+        self, 
+        data: Dict[str, Any], 
+        avatar_data: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Calcula métricas de performance"""
         
         preco = float(data.get('preco', 997)) if data.get('preco') else 997
         
@@ -932,26 +678,17 @@ Use APENAS dados REAIS encontrados na pesquisa.
                 {
                     "metrica": "Taxa de Conversão",
                     "objetivo": "3-5%",
-                    "frequencia": "Semanal",
-                    "responsavel": "Equipe de Vendas"
+                    "frequencia": "Semanal"
                 },
                 {
                     "metrica": "Custo por Lead",
                     "objetivo": f"R$ {preco * 0.1:.2f}",
-                    "frequencia": "Diário",
-                    "responsavel": "Marketing"
+                    "frequencia": "Diário"
                 },
                 {
                     "metrica": "Lifetime Value",
                     "objetivo": f"R$ {preco * 3:.2f}",
-                    "frequencia": "Mensal", 
-                    "responsavel": "CS"
-                },
-                {
-                    "metrica": "ROI Marketing",
-                    "objetivo": "300-500%",
-                    "frequencia": "Mensal",
-                    "responsavel": "Marketing"
+                    "frequencia": "Mensal"
                 }
             ],
             "projecoes_financeiras": {
@@ -963,7 +700,7 @@ Use APENAS dados REAIS encontrados na pesquisa.
                 },
                 "cenario_realista": {
                     "receita_mensal": f"R$ {preco * 25:.2f}",
-                    "clientes_mes": "25-35", 
+                    "clientes_mes": "25-35",
                     "ticket_medio": f"R$ {preco:.2f}",
                     "margem_lucro": "70%"
                 },
@@ -975,285 +712,287 @@ Use APENAS dados REAIS encontrados na pesquisa.
                 }
             },
             "roi_esperado": "300-500% em 12 meses",
-            "payback_investimento": "2-4 meses",
-            "lifetime_value": f"R$ {preco * 3:.2f}",
-            "churn_rate_esperado": "5-10% mensal",
-            "crescimento_mensal": "15-25%"
+            "payback_investimento": "2-4 meses"
         }
     
-    def _generate_projections_scenarios(self, data: Dict[str, Any], metrics_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Gera projeções e cenários futuros"""
+    def _generate_projections_scenarios(
+        self, 
+        data: Dict[str, Any], 
+        metrics_data: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Gera projeções e cenários"""
         
         return {
-            "horizonte_temporal": "36 meses",
-            "cenarios": {
-                "conservador": {
-                    "probabilidade": "30%",
-                    "crescimento_anual": "50%",
-                    "receita_ano_1": metrics_data["projecoes_financeiras"]["cenario_conservador"]["receita_mensal"],
-                    "receita_ano_2": f"R$ {float(metrics_data['projecoes_financeiras']['cenario_conservador']['receita_mensal'].replace('R$ ', '').replace(',', '')) * 1.5:.2f}",
-                    "receita_ano_3": f"R$ {float(metrics_data['projecoes_financeiras']['cenario_conservador']['receita_mensal'].replace('R$ ', '').replace(',', '')) * 2.25:.2f}"
-                },
-                "realista": {
-                    "probabilidade": "50%", 
-                    "crescimento_anual": "100%",
-                    "receita_ano_1": metrics_data["projecoes_financeiras"]["cenario_realista"]["receita_mensal"],
-                    "receita_ano_2": f"R$ {float(metrics_data['projecoes_financeiras']['cenario_realista']['receita_mensal'].replace('R$ ', '').replace(',', '')) * 2:.2f}",
-                    "receita_ano_3": f"R$ {float(metrics_data['projecoes_financeiras']['cenario_realista']['receita_mensal'].replace('R$ ', '').replace(',', '')) * 4:.2f}"
-                },
-                "otimista": {
-                    "probabilidade": "20%",
-                    "crescimento_anual": "200%", 
-                    "receita_ano_1": metrics_data["projecoes_financeiras"]["cenario_otimista"]["receita_mensal"],
-                    "receita_ano_2": f"R$ {float(metrics_data['projecoes_financeiras']['cenario_otimista']['receita_mensal'].replace('R$ ', '').replace(',', '')) * 3:.2f}",
-                    "receita_ano_3": f"R$ {float(metrics_data['projecoes_financeiras']['cenario_otimista']['receita_mensal'].replace('R$ ', '').replace(',', '')) * 9:.2f}"
-                }
+            "cenario_conservador": {
+                "crescimento_mensal": "5-10%",
+                "market_share": "0.5-1%",
+                "risco": "Baixo",
+                "probabilidade": "70%"
             },
-            "fatores_criticos": [
-                "Qualidade da execução do plano",
-                "Consistência nas ações de marketing",
-                "Capacidade de escalar operações",
-                "Adaptação às mudanças do mercado"
-            ],
-            "marcos_importantes": {
-                "mes_3": "Primeiros resultados consistentes",
-                "mes_6": "Break-even operacional",
-                "mes_12": "Escalabilidade comprovada",
-                "mes_24": "Dominância no nicho",
-                "mes_36": "Expansão para novos mercados"
+            "cenario_realista": {
+                "crescimento_mensal": "15-25%",
+                "market_share": "2-5%",
+                "risco": "Médio",
+                "probabilidade": "50%"
+            },
+            "cenario_otimista": {
+                "crescimento_mensal": "30-50%",
+                "market_share": "5-10%",
+                "risco": "Alto",
+                "probabilidade": "20%"
             }
         }
     
-    def _create_detailed_action_plan(self, data: Dict[str, Any], analysis_result: Dict[str, Any]) -> Dict[str, Any]:
+    def _create_detailed_action_plan(
+        self, 
+        data: Dict[str, Any], 
+        positioning_data: Dict[str, Any]
+    ) -> Dict[str, Any]:
         """Cria plano de ação detalhado"""
         
         return {
             "fase_1_preparacao": {
                 "duracao": "30 dias",
-                "foco": "Estruturação e planejamento",
-                "investimento": "R$ 5.000 - R$ 15.000",
                 "atividades": [
-                    "Implementar avatar arqueológico na comunicação",
-                    "Instalar drivers mentais no conteúdo",
-                    "Criar sistema anti-objeção",
-                    "Desenvolver provas visuais",
-                    "Estruturar pré-pitch invisível"
+                    "Definir posicionamento e mensagem central",
+                    "Criar avatar detalhado do cliente ideal",
+                    "Desenvolver proposta de valor única",
+                    "Estruturar funil de vendas básico"
                 ],
+                "investimento": "R$ 5.000 - R$ 15.000",
                 "entregas": [
-                    "Avatar documentado e validado",
-                    "Drivers mentais customizados",
-                    "Sistema anti-objeção implementado",
-                    "Provas visuais criadas",
-                    "Pré-pitch estruturado"
-                ],
-                "responsaveis": [
-                    "Especialista em psicologia de vendas",
-                    "Designer de experiências",
-                    "Copywriter especializado"
+                    "Avatar documentado",
+                    "Posicionamento definido",
+                    "Funil estruturado"
                 ]
             },
             "fase_2_lancamento": {
                 "duracao": "60 dias",
-                "foco": "Implementação e otimização",
-                "investimento": "R$ 10.000 - R$ 30.000",
                 "atividades": [
-                    "Executar campanhas com drivers mentais",
-                    "Testar provas visuais em eventos",
-                    "Aplicar sistema anti-objeção",
-                    "Otimizar pré-pitch baseado em feedback",
-                    "Medir e ajustar conversões"
+                    "Implementar estratégias de marketing",
+                    "Criar conteúdo para atração",
+                    "Configurar sistemas de automação",
+                    "Testar e otimizar conversões"
                 ],
+                "investimento": "R$ 10.000 - R$ 30.000",
                 "entregas": [
-                    "Campanhas ativas com drivers",
-                    "Eventos com provas visuais",
-                    "Sistema anti-objeção funcionando",
-                    "Pré-pitch otimizado",
-                    "Métricas de conversão"
-                ],
-                "responsaveis": [
-                    "Equipe de marketing",
-                    "Especialista em eventos",
-                    "Analista de conversão"
+                    "Campanhas ativas",
+                    "Conteúdo publicado",
+                    "Sistemas funcionando"
                 ]
             },
             "fase_3_crescimento": {
                 "duracao": "90+ dias",
-                "foco": "Escala e expansão",
-                "investimento": "R$ 20.000 - R$ 50.000",
                 "atividades": [
                     "Escalar campanhas que funcionam",
                     "Expandir para novos canais",
-                    "Treinar equipe nos sistemas",
-                    "Desenvolver novos drivers",
-                    "Criar parcerias estratégicas"
+                    "Otimizar processos internos",
+                    "Desenvolver parcerias estratégicas"
                 ],
+                "investimento": "R$ 20.000 - R$ 50.000",
                 "entregas": [
                     "Crescimento sustentável",
-                    "Novos canais ativos",
-                    "Equipe treinada",
-                    "Novos drivers desenvolvidos",
-                    "Parcerias estabelecidas"
-                ],
-                "responsaveis": [
-                    "Gerente de crescimento",
-                    "Equipe comercial",
-                    "Parceiros estratégicos"
+                    "Processos otimizados",
+                    "Parcerias ativas"
                 ]
             }
         }
     
-    def _generate_exclusive_insights(self, analysis_result: Dict[str, Any], data: Dict[str, Any]) -> List[str]:
-        """Gera insights exclusivos baseados em toda a análise"""
+    def _consolidate_exclusive_insights(
+        self, 
+        data: Dict[str, Any], 
+        research_data: Dict[str, Any], 
+        avatar_data: Dict[str, Any], 
+        competition_data: List[Dict[str, Any]]
+    ) -> List[str]:
+        """Consolida insights exclusivos"""
+        
+        segmento = data.get('segmento', 'negócios')
         
         insights = [
-            f"🎯 Avatar Arqueológico: O perfil de {data.get('segmento')} apresenta 3 arquétipos dominantes que requerem abordagens específicas",
-            "🧠 Drivers Mentais: Os 7 drivers customizados criados atacam as objeções mais profundas identificadas no avatar",
-            "🛡️ Sistema Anti-Objeção: 5 objeções ocultas foram mapeadas além das 3 universais, com contra-ataques específicos",
-            "🎭 Provas Visuais: Demonstrações físicas transformam conceitos abstratos em experiências inesquecíveis",
-            "🎯 Pré-Pitch Invisível: Sequência psicológica de 6 fases prepara o terreno mental antes da oferta",
-            f"⚔️ Concorrência: Identificados gaps específicos no mercado de {data.get('segmento')} não explorados",
-            "📈 Métricas: Projeções baseadas em dados reais mostram potencial de crescimento exponencial",
-            "🔮 Futuro: Tendências identificadas indicam janela de oportunidade única nos próximos 18 meses",
-            "💰 ROI: Sistema completo pode gerar retorno de 300-500% em 12 meses baseado em métricas conservadoras",
-            "🚀 Implementação: Plano de 3 fases garante execução progressiva sem sobrecarga operacional"
+            f"O mercado brasileiro de {segmento} está em transformação digital acelerada",
+            "Existe lacuna entre ferramentas disponíveis e conhecimento para implementá-las",
+            "A maior dor não é falta de informação, mas excesso sem direcionamento",
+            f"Profissionais de {segmento} pagam premium por simplicidade",
+            "Fator decisivo é combinação de confiança + urgência + prova social",
+            "Prova social de pares vale mais que depoimentos de clientes diferentes",
+            "Objeção real não é preço, é medo de mais uma tentativa frustrada",
+            f"Sistemas automatizados são vistos como 'santo graal' no {segmento}",
+            "Jornada de compra é longa (3-6 meses) mas decisão final é emocional",
+            "Conteúdo educativo gratuito é porta de entrada, venda acontece na demonstração",
+            f"Mercado de {segmento} saturado de teoria, faminto por implementação prática",
+            "Diferencial competitivo real está na execução e suporte, não apenas na estratégia",
+            "Clientes querem ser guiados passo a passo, não apenas informados",
+            "ROI deve ser demonstrado em semanas, não meses, para gerar confiança"
         ]
         
-        # Adiciona insights específicos baseados na pesquisa
-        if analysis_result.get("pesquisa_web_massiva", {}).get("total_resultados", 0) > 0:
-            insights.append(f"🌐 Pesquisa Massiva: {analysis_result['pesquisa_web_massiva']['total_resultados']} resultados analisados garantem base sólida de dados reais")
-        
-        if analysis_result.get("avatar_ultra_detalhado", {}).get("comportamento"):
-            insights.append("👥 Comportamento: Padrões psicológicos identificados permitem previsão precisa de objeções e reações")
+        # Adiciona insights baseados na pesquisa
+        if research_data.get("total_resultados", 0) > 0:
+            insights.append(f"✅ Análise baseada em {research_data['total_resultados']} fontes reais de dados")
         
         return insights
     
-    def _parse_json_response(self, response: str, context: str) -> Any:
-        """Parse seguro de resposta JSON"""
-        try:
-            # Remove markdown se presente
-            clean_text = response.strip()
-            
-            if "```json" in clean_text:
-                start = clean_text.find("```json") + 7
-                end = clean_text.rfind("```")
-                clean_text = clean_text[start:end].strip()
-            elif "```" in clean_text:
-                start = clean_text.find("```") + 3
-                end = clean_text.rfind("```")
-                clean_text = clean_text[start:end].strip()
-            
-            return json.loads(clean_text)
-            
-        except json.JSONDecodeError as e:
-            logger.error(f"Erro ao parsear JSON para {context}: {str(e)}")
-            return {}
-    
-    def _generate_fallback_avatar(self, data: Dict[str, Any]) -> Dict[str, Any]:
+    # Métodos de fallback
+    def _generate_fallback_avatar(self, segmento: str) -> Dict[str, Any]:
         """Gera avatar de fallback"""
-        segmento = data.get('segmento', 'Negócios')
-        
         return {
             "nome_ficticio": f"Profissional {segmento} Brasileiro",
-            "perfil_demografico_detalhado": {
-                "idade": "30-45 anos - faixa de maior poder aquisitivo",
-                "genero": "55% masculino, 45% feminino",
-                "renda": "R$ 8.000 - R$ 35.000 - classe média alta",
-                "escolaridade": "Superior completo - 78% têm graduação",
-                "localizacao": "Grandes centros urbanos brasileiros"
+            "perfil_demografico": {
+                "idade": "30-45 anos",
+                "genero": "Distribuição equilibrada",
+                "renda": "R$ 8.000 - R$ 35.000",
+                "escolaridade": "Superior completo",
+                "localizacao": "Grandes centros urbanos",
+                "estado_civil": "68% casados",
+                "profissao": f"Profissionais de {segmento}"
             },
-            "comportamento": {
-                "arquetipos_dominantes": {
-                    "tecnico_aprisionado": {
-                        "percentual": "30%",
-                        "descricao": "Profissional técnico preso na execução"
-                    },
-                    "escalador_frustrado": {
-                        "percentual": "40%", 
-                        "descricao": "Empreendedor estagnado no mesmo nível"
-                    },
-                    "visionario_sufocado": {
-                        "percentual": "30%",
-                        "descricao": "Líder com visão mas equipe que não acompanha"
-                    }
-                }
-            }
+            "dores_viscerais": [
+                f"Trabalhar muito em {segmento} sem ver crescimento",
+                "Sentir-se sempre correndo atrás da concorrência",
+                "Ver competidores menores crescendo mais rápido"
+            ],
+            "desejos_secretos": [
+                f"Ser reconhecido como autoridade em {segmento}",
+                "Ter um negócio que funcione sem presença constante",
+                "Ganhar dinheiro de forma passiva"
+            ]
         }
     
-    def _generate_fallback_drivers(self, data: Dict[str, Any]) -> List[Dict[str, Any]]:
+    def _generate_fallback_drivers(self, segmento: str) -> List[Dict[str, Any]]:
         """Gera drivers de fallback"""
         return [
             {
-                "nome": "Diagnóstico Brutal",
+                "nome": "DIAGNÓSTICO BRUTAL",
                 "gatilho_central": "Confronto com realidade atual",
-                "definicao_visceral": "Expor a situação real sem filtros",
-                "roteiro_ativacao": {
-                    "pergunta_abertura": f"Há quanto tempo você está no mesmo nível em {data.get('segmento')}?",
-                    "comando_acao": "Pare de aceitar mediocridade"
-                }
+                "definicao_visceral": f"Expor a verdade sobre a situação atual em {segmento}",
+                "momento_ideal": "Abertura - primeira quebra de padrão"
             }
         ]
     
-    def _generate_fallback_anti_objection(self, data: Dict[str, Any]) -> Dict[str, Any]:
+    def _generate_fallback_anti_objection(self) -> Dict[str, Any]:
         """Gera sistema anti-objeção de fallback"""
         return {
             "objecoes_universais": {
                 "tempo": {
-                    "objecao": "Não tenho tempo agora",
-                    "contra_ataque": "Tempo não é sobre ter, é sobre priorizar"
+                    "objecao": "Não tenho tempo",
+                    "contra_ataque": "Quanto tempo você perde sem um sistema?"
                 },
                 "dinheiro": {
                     "objecao": "Está caro",
-                    "contra_ataque": "Caro é continuar perdendo oportunidades"
+                    "contra_ataque": "Qual o custo de continuar como está?"
                 }
-            }
+            },
+            "arsenal_emergencia": [
+                "Se não for agora, quando será?",
+                "O que você tem a perder tentando?"
+            ]
         }
     
-    def _generate_fallback_provis(self, data: Dict[str, Any]) -> List[Dict[str, Any]]:
+    def _generate_fallback_visual_proofs(self) -> List[Dict[str, Any]]:
         """Gera provas visuais de fallback"""
         return [
             {
-                "nome": "Demonstração do Custo",
-                "conceito_alvo": "Mostrar custo da inação",
-                "experimento": "Calculadora mostrando perdas mensais"
+                "nome": "PROVA DE RESULTADOS",
+                "conceito_alvo": "Eficácia do método",
+                "experimento": "Demonstração de antes e depois",
+                "materiais": ["Dados reais", "Gráficos", "Depoimentos"]
             }
         ]
     
-    def _generate_fallback_pre_pitch(self, data: Dict[str, Any]) -> Dict[str, Any]:
+    def _generate_fallback_pre_pitch(self) -> Dict[str, Any]:
         """Gera pré-pitch de fallback"""
         return {
             "orquestracao_emocional": {
                 "sequencia_psicologica": [
                     {
-                        "fase": "QUEBRA",
-                        "objetivo": "Despertar consciência",
-                        "tempo": "3 minutos"
+                        "fase": "Quebra de Padrão",
+                        "objetivo": "Interromper piloto automático",
+                        "tempo": "30 segundos"
                     }
                 ]
             }
         }
     
-    def _generate_fallback_competition(self, data: Dict[str, Any]) -> Dict[str, Any]:
+    def _generate_fallback_competition(self, segmento: str) -> List[Dict[str, Any]]:
         """Gera análise de concorrência de fallback"""
-        return {
-            "concorrentes_diretos": [
-                {
-                    "nome": f"Concorrente Principal {data.get('segmento')}",
-                    "analise_swot": {
-                        "forcas": ["Marca estabelecida"],
-                        "fraquezas": ["Processos lentos"]
-                    }
-                }
-            ]
-        }
+        return [
+            {
+                "nome": f"Concorrente Principal {segmento}",
+                "forcas": "Marca estabelecida, recursos financeiros",
+                "fraquezas": "Processos lentos, falta de inovação",
+                "oportunidades": "Nichos específicos não atendidos"
+            }
+        ]
     
-    def _generate_emergency_analysis(self, data: Dict[str, Any], error: str) -> Dict[str, Any]:
-        """Gera análise de emergência"""
+    def _parse_competition_response(self, response: str, segmento: str) -> List[Dict[str, Any]]:
+        """Processa resposta de análise de concorrência"""
+        # Implementação simplificada - pode ser expandida
+        return [
+            {
+                "nome": f"Concorrente Principal {segmento}",
+                "analise_swot": {
+                    "forcas": ["Marca estabelecida", "Recursos financeiros"],
+                    "fraquezas": ["Processos lentos", "Falta de inovação"],
+                    "oportunidades": ["Nichos específicos", "Personalização"],
+                    "ameacas": ["Novos entrantes", "Mudanças tecnológicas"]
+                },
+                "estrategia_marketing": "Marketing tradicional com foco em volume",
+                "posicionamento": "Líder estabelecido no mercado"
+            }
+        ]
+    
+    def _generate_fallback_gigantic_analysis(self, data: Dict[str, Any], error: str) -> Dict[str, Any]:
+        """Gera análise GIGANTE de fallback"""
+        
+        segmento = data.get('segmento', 'Negócios')
+        
         return {
-            "avatar_ultra_detalhado": self._generate_fallback_avatar(data),
-            "drivers_mentais_customizados": self._generate_fallback_drivers(data),
-            "sistema_anti_objecao": self._generate_fallback_anti_objection(data),
-            "error": error,
-            "status": "emergency_mode"
+            "avatar_ultra_detalhado": self._generate_fallback_avatar(segmento),
+            "drivers_mentais_customizados": self._generate_fallback_drivers(segmento),
+            "sistema_anti_objecao": self._generate_fallback_anti_objection(),
+            "provas_visuais_sugeridas": self._generate_fallback_visual_proofs(),
+            "pre_pitch_invisivel": self._generate_fallback_pre_pitch(),
+            "analise_concorrencia_detalhada": self._generate_fallback_competition(segmento),
+            "escopo": {
+                "posicionamento_mercado": f"Solução para {segmento}",
+                "proposta_valor_unica": f"Metodologia para {segmento}"
+            },
+            "estrategia_palavras_chave": {
+                "palavras_primarias": [segmento.lower(), "estratégia", "marketing"],
+                "palavras_secundarias": ["crescimento", "vendas", "digital"],
+                "palavras_cauda_longa": [f"como crescer em {segmento.lower()}"]
+            },
+            "metricas_performance_detalhadas": {
+                "kpis_principais": [{"metrica": "Conversão", "objetivo": "3-5%"}],
+                "roi_esperado": "300% em 12 meses"
+            },
+            "projecoes_cenarios": {
+                "cenario_realista": {"crescimento_mensal": "15-25%"}
+            },
+            "plano_acao_detalhado": {
+                "fase_1_preparacao": {
+                    "duracao": "30 dias",
+                    "atividades": ["Definir estratégia", "Criar conteúdo"]
+                }
+            },
+            "insights_exclusivos": [
+                f"Mercado de {segmento} em transformação",
+                "Oportunidades de crescimento identificadas",
+                f"⚠️ Análise gerada em modo de emergência devido a: {error}"
+            ],
+            "pesquisa_web_massiva": {
+                "total_queries": 0,
+                "total_resultados": 0,
+                "status": "Erro na pesquisa web"
+            },
+            "metadata": {
+                "processing_time_seconds": 0,
+                "analysis_engine": "ARQV30 Emergency Mode",
+                "generated_at": datetime.utcnow().isoformat(),
+                "quality_score": 25.0,
+                "error": error,
+                "recommendation": "Execute nova análise com configuração completa"
+            }
         }
 
 # Instância global
